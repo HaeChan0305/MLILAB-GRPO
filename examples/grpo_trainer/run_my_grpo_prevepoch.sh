@@ -3,8 +3,8 @@ set -x
 export CUDA_DEVICE_ORDER="PCI_BUS_ID"
 export CUDA_VISIBLE_DEVICES="0,1,2,3"
 export VLLM_USE_V1='0'
-# export HF_TOKEN="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"
-export WANDB_API_KEY="79f4decc1667e5ef75c38f236c356ee5cc1c764b"
+# export HF_TOKEN=""
+export WANDB_API_KEY=""
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
