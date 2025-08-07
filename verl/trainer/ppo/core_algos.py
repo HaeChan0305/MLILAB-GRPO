@@ -101,6 +101,7 @@ class AdvantageEstimator(str, Enum):
     OPO = "opo"
     GRPO_PASSK = "grpo_passk"
     GPG = "gpg"
+    ABSPO = "abspo"
 
 
 ADV_ESTIMATOR_REGISTRY: dict[str, Any] = {}
@@ -323,6 +324,42 @@ def compute_grpo_outcome_advantage(
 
     return scores, scores
 
+# NOTE(sgm): this implementation only consider outcome supervision, where the reward is a scalar.
+@register_adv_est(AdvantageEstimator.ABSPO)  # or simply: @register_adv_est("grpo")
+def compute_abspo_outcome_advantage(
+    token_level_rewards: torch.Tensor,
+    response_mask: torch.Tensor,
+    index: np.ndarray,
+    epsilon: float = 1e-6,
+    norm_adv_by_std_in_grpo: str = True,
+):
+    """
+    Compute advantage for GRPO, operating only on Outcome reward
+    (with only one scalar reward for each response).
+
+    Args:
+        token_level_rewards: `(torch.Tensor)`
+            shape is (bs, response_length)
+        response_mask: `(torch.Tensor)`
+            shape is (bs, response_length)
+        norm_adv_by_std_in_grpo: (bool)
+            whether to scale the GRPO advantage.
+            If True, the advantage is scaled by the std, as in the original GRPO.
+            If False, the advantage is not scaled, as in Dr.GRPO (https://arxiv.org/abs/2503.20783).
+
+    Returns:
+        advantages: `(torch.Tensor)`
+            shape is (bs, response_length)
+        Returns: `(torch.Tensor)`
+            shape is (bs, response_length)
+    """
+    scores = token_level_rewards.sum(dim=-1)
+
+    with torch.no_grad():
+        scores = torch.where(scores == 0, torch.tensor(-1.0), torch.tensor(1.0))
+        scores = scores.unsqueeze(-1) * response_mask
+
+    return scores, scores
 
 @register_adv_est(AdvantageEstimator.GRPO_PASSK)  # or simply: @register_adv_est("grpo_passk")
 def compute_grpo_passk_outcome_advantage(
