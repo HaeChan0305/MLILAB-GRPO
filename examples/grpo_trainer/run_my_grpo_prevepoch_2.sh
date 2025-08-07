@@ -3,8 +3,8 @@ set -x
 export CUDA_DEVICE_ORDER="PCI_BUS_ID"
 export CUDA_VISIBLE_DEVICES="4,5,6,7"
 export VLLM_USE_V1='0'
-# export HF_TOKEN="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"
-export WANDB_API_KEY="79f4decc1667e5ef75c38f236c356ee5cc1c764b"
+# export HF_TOKEN=""
+export WANDB_API_KEY=""
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
@@ -20,8 +20,8 @@ python3 -m verl.trainer.main_ppo \
     data.val_files=/workspace/GRPO/data/MATH500/test.parquet \
     data.train_batch_size=16 \
     data.val_batch_size=16 \
-    data.max_prompt_length=1024 \
-    data.max_response_length=4096 \
+    data.max_prompt_length=$((1024 * 1)) \
+    data.max_response_length=$((1024 * 4)) \
     data.filter_overlong_prompts=True \
     data.truncation='error' \
     actor_rollout_ref.model.path=Qwen/Qwen2.5-1.5B \
