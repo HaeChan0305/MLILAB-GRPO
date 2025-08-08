@@ -20,8 +20,8 @@ def compute_score(solution_str, ground_truth):
     # print(solution_str)
     # print("=============== Ground Truth ==============")
     # print(ground_truth)
-    print("=============== retval ==============")
-    print(retval)
+    # print("=============== retval ==============")
+    # print(retval)
     
     return retval
 
