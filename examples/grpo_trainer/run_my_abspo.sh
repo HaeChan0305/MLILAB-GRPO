@@ -8,7 +8,7 @@ export WANDB_API_KEY="79f4decc1667e5ef75c38f236c356ee5cc1c764b"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
 export WANDB_RESUME='must'
-export WANDB_RUN_ID="2l0gcp5e"
+export WANDB_RUN_ID="2l0gcp5e2"
 export HYDRA_FULL_ERROR=1
 export VLLM_ATTENTION_BACKEND=XFORMERS
 

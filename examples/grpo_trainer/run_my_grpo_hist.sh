@@ -1,21 +1,21 @@
 set -x
 
 export CUDA_DEVICE_ORDER="PCI_BUS_ID"
-export CUDA_VISIBLE_DEVICES="4,5,6,7"
+export CUDA_VISIBLE_DEVICES="0,1,2,3"
 export VLLM_USE_V1='1'
 # export HF_TOKEN="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"
 export WANDB_API_KEY="79f4decc1667e5ef75c38f236c356ee5cc1c764b"
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
-# export WANDB_RUN_ID="upn48kco"
+export WANDB_RUN_ID="3hpeoabm"
 export HYDRA_FULL_ERROR=1
 # export VLLM_ATTENTION_BACKEND=XFORMERS
 export WANDB_RESUME='must'
 
 
 python3 -m verl.trainer.main_ppo \
-    algorithm.adv_estimator=grpo \
+    algorithm.adv_estimator=grpohist \
     data.train_files=/workspace/GRPO/data/MATH/train.parquet \
     data.val_files=/workspace/GRPO/data/MATH500/test.parquet \
     data.train_batch_size=32 \
@@ -49,14 +49,15 @@ python3 -m verl.trainer.main_ppo \
     trainer.critic_warmup=0 \
     trainer.logger=['console','wandb'] \
     trainer.project_name='verl_grpo_prev_epoch_qwen2_5_1_5b_MATH' \
-    trainer.experiment_name='grpo-baseline' \
+    trainer.experiment_name='grpo-hist' \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=20 \
-    trainer.default_local_dir='/workspace/GRPO/models/verl_grpo_prev_epoch_qwen2_5_1_5b_MATH' \
+    trainer.default_local_dir='/workspace/GRPO/models/verl_grpohist_qwen2_5_1_5b_MATH' \
     trainer.test_freq=20 \
     trainer.total_epochs=6 \
     trainer.val_before_train=False $@
 
 python3 ../send_msg.py
 
+# trainer.rollout_data_dir='/workspace/GRPO/models/verl_grpohist_qwen2_5_1_5b_MATH/rollout' \
