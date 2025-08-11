@@ -3,15 +3,13 @@ set -x
 export CUDA_DEVICE_ORDER="PCI_BUS_ID"
 export CUDA_VISIBLE_DEVICES="0,1,2,3"
 export VLLM_USE_V1='1'
-# export HF_TOKEN="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"
-export WANDB_API_KEY="79f4decc1667e5ef75c38f236c356ee5cc1c764b"
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
-export WANDB_RUN_ID="3hpeoabm"
+# export WANDB_RUN_ID="3hpeoabm"
 export HYDRA_FULL_ERROR=1
 # export VLLM_ATTENTION_BACKEND=XFORMERS
-export WANDB_RESUME='must'
+# export WANDB_RESUME='must'
 
 
 python3 -m verl.trainer.main_ppo \
@@ -49,7 +47,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.critic_warmup=0 \
     trainer.logger=['console','wandb'] \
     trainer.project_name='verl_grpo_prev_epoch_qwen2_5_1_5b_MATH' \
-    trainer.experiment_name='grpo-hist' \
+    trainer.experiment_name='grpo-hist-2' \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=20 \
