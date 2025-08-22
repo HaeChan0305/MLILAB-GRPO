@@ -20,6 +20,9 @@ implement PPO-like algorithms.
 
 __all__ = ["register_adv_est", "get_adv_estimator_fn", "AdvantageEstimator"]
 
+import os
+import json
+
 from collections import defaultdict
 from enum import Enum
 from typing import Any, Callable, Optional
@@ -363,12 +366,16 @@ def compute_grpohist_outcome_advantage(
         Returns: `(torch.Tensor)`
             shape is (bs, response_length)
     """
+    def compute_len_id2score(id2score):
+        ret = 0
+        for v in id2score.values():
+            ret += len(v)
+        return ret
+    
     scores = token_level_rewards.sum(dim=-1)
 
-    import os
-    import json
-
-    id2score_path = '/workspace/GRPO/models/verl_grpohist_qwen2_5_1_5b_MATH/id2score.json'
+    home = '/workspace/GRPO/models/verl_grpohist_qwen2_5_1_5b_MATH/'
+    id2score_path = os.path.join(home, 'id2score.json')
 
     if os.path.exists(id2score_path):    
         with open(id2score_path, "r") as f:
@@ -382,27 +389,36 @@ def compute_grpohist_outcome_advantage(
     with torch.no_grad():
         bsz = scores.shape[0]
         for i in range(bsz):
-            if not index[i] in id2score.keys():
-                id2score[index[i]] = []
-            id2score[index[i]].append(scores[i].item())
+            key = str(index[i])
+            if not key in id2score.keys():
+                id2score[key] = []
+            id2score[key].append(scores[i].item())
         with open(id2score_path, "w") as f:
             json.dump(id2score, f, indent=2)
+        
+        len_id2score = compute_len_id2score(id2score)
+        steps = len_id2score // (32 * 8)
+        if steps % 20 == 0:
+            with open(os.path.join(home, f'id2score_step_{steps}.json'), "w") as f:
+                json.dump(id2score, f, indent=2)
             
         for idx in np.unique(index):
-            if len(id2score[idx]) == 1:
-                id2mean[idx] = torch.tensor(0.0)
-                id2std[idx] = torch.tensor(1.0)
-            elif len(id2score[idx]) > 1:
-                scores_tensor = torch.tensor(id2score[idx])
-                id2mean[idx] = torch.mean(scores_tensor)
-                id2std[idx] = torch.std(scores_tensor)
+            key = str(idx)
+            if len(id2score[key]) == 1:
+                id2mean[key] = torch.tensor(0.0)
+                id2std[key] = torch.tensor(1.0)
+            elif len(id2score[key]) > 1:
+                scores_tensor = torch.tensor(id2score[key])
+                id2mean[key] = torch.mean(scores_tensor)
+                id2std[key] = torch.std(scores_tensor)
             else:
                 raise ValueError(f"no score in prompt index: {idx}")
         for i in range(bsz):
+            key = str(index[i])
             if norm_adv_by_std_in_grpo:
-                scores[i] = (scores[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)
+                scores[i] = (scores[i] - id2mean[key]) / (id2std[key] + epsilon)
             else:
-                scores[i] = scores[i] - id2mean[index[i]]
+                scores[i] = scores[i] - id2mean[key]
         scores = scores.unsqueeze(-1) * response_mask
 
     return scores, scores

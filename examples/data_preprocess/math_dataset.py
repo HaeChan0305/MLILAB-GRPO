@@ -41,7 +41,8 @@ if __name__ == "__main__":
     print(f"Loading the {data_source} dataset from huggingface...", flush=True)
     dataset = datasets.load_dataset(data_source, trust_remote_code=True)
 
-    train_dataset = dataset["train"]
+
+    train_dataset = dataset["train"].select(range(32))
     test_dataset = dataset["test"]
 
     instruction_following = "Let's think step by step and output the final answer within \\boxed{}.\n\n"
@@ -79,8 +80,8 @@ if __name__ == "__main__":
     local_dir = args.local_dir
     hdfs_dir = args.hdfs_dir
 
-    train_dataset.to_parquet(os.path.join(local_dir, "train.parquet"))
-    test_dataset.to_parquet(os.path.join(local_dir, "test.parquet"))
+    train_dataset.to_parquet(os.path.join(local_dir, "train_example_32.parquet"))
+    test_dataset.to_parquet(os.path.join(local_dir, "test_example_32.parquet"))
 
     if hdfs_dir is not None:
         makedirs(hdfs_dir)

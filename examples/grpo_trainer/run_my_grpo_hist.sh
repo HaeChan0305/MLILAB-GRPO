@@ -6,7 +6,7 @@ export VLLM_USE_V1='1'
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
-# export WANDB_RUN_ID="3hpeoabm"
+# export WANDB_RUN_ID="5ga7ewrq"
 export HYDRA_FULL_ERROR=1
 # export VLLM_ATTENTION_BACKEND=XFORMERS
 # export WANDB_RESUME='must'
@@ -47,7 +47,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.critic_warmup=0 \
     trainer.logger=['console','wandb'] \
     trainer.project_name='verl_grpo_prev_epoch_qwen2_5_1_5b_MATH' \
-    trainer.experiment_name='grpo-hist-2' \
+    trainer.experiment_name='grpo-hist-2-cont220' \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=20 \
