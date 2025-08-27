@@ -106,6 +106,7 @@ class AdvantageEstimator(str, Enum):
     GPG = "gpg"
     ABSPO = "abspo"
     GRPOHIST = "grpohist"
+    GRPOHIST2 = "grpohist2"
 
 
 ADV_ESTIMATOR_REGISTRY: dict[str, Any] = {}
@@ -374,7 +375,114 @@ def compute_grpohist_outcome_advantage(
     
     scores = token_level_rewards.sum(dim=-1)
 
-    home = '/workspace/GRPO/models/verl_grpohist_qwen2_5_1_5b_MATH/'
+    home = "/workspace/GRPO/models/grpo-hist-clip-1_0-clipc-10-nokl"
+    if not os.path.exists(home):
+        os.makedirs(home, exist_ok=True)
+        print(f"Directory created: {home}")
+    else:
+        print(f"Directory already exists: {home}")
+        
+    id2score_path = os.path.join(home, 'id2score.json')
+
+    if os.path.exists(id2score_path):    
+        with open(id2score_path, "r") as f:
+            id2score = json.load(f)
+    else:
+        id2score = defaultdict(list)
+    
+    id2mean = {}
+    id2std = {}
+
+    with torch.no_grad():
+        bsz = scores.shape[0]
+        for i in range(bsz):
+            key = str(index[i])
+            if not key in id2score.keys():
+                id2score[key] = []
+            id2score[key].append(scores[i].item())
+        with open(id2score_path, "w") as f:
+            json.dump(id2score, f, indent=2)
+        
+        len_id2score = compute_len_id2score(id2score)
+        steps = len_id2score // (32 * 8)
+        if steps % 20 == 0:
+            with open(os.path.join(home, f'id2score_step_{steps}.json'), "w") as f:
+                json.dump(id2score, f, indent=2)
+            
+        for idx in np.unique(index):
+            key = str(idx)
+            if len(id2score[key]) == 1:
+                id2mean[key] = torch.tensor(0.0)
+                id2std[key] = torch.tensor(1.0)
+            elif len(id2score[key]) > 1:
+                scores_tensor = torch.tensor(id2score[key])
+                id2mean[key] = torch.mean(scores_tensor)
+                id2std[key] = torch.std(scores_tensor)
+            else:
+                raise ValueError(f"no score in prompt index: {idx}")
+        for i in range(bsz):
+            key = str(index[i])
+            if norm_adv_by_std_in_grpo:
+                scores[i] = (scores[i] - id2mean[key]) / (id2std[key] + epsilon)
+            else:
+                scores[i] = scores[i] - id2mean[key]
+        scores = scores.unsqueeze(-1) * response_mask
+
+    return scores, scores
+
+# NOTE(sgm): this implementation only consider outcome supervision, where the reward is a scalar.
+@register_adv_est(AdvantageEstimator.GRPOHIST2)
+def compute_grpohist2_outcome_advantage(
+    token_level_rewards: torch.Tensor,
+    response_mask: torch.Tensor,
+    index: np.ndarray,
+    epsilon: float = 1e-6,
+    norm_adv_by_std_in_grpo: bool = True,
+    config: Optional[AlgoConfig] = None,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """
+    Compute advantage for GRPO, operating only on Outcome reward
+    (with only one scalar reward for each response).
+
+    Args:
+        token_level_rewards: `(torch.Tensor)`
+            shape is (bs, response_length)
+        response_mask: `(torch.Tensor)`
+            shape is (bs, response_length)
+        index: `(np.ndarray)`
+            index array for grouping
+        epsilon: `(float)`
+            small value to avoid division by zero
+        norm_adv_by_std_in_grpo: `(bool)`
+            whether to scale the GRPO advantage
+        config: `(Optional[AlgoConfig])`
+            algorithm configuration object
+
+    Note:
+        If norm_adv_by_std_in_grpo is True, the advantage is scaled by the std, as in the original GRPO.
+        If False, the advantage is not scaled, as in Dr.GRPO (https://arxiv.org/abs/2503.20783).
+
+    Returns:
+        advantages: `(torch.Tensor)`
+            shape is (bs, response_length)
+        Returns: `(torch.Tensor)`
+            shape is (bs, response_length)
+    """
+    def compute_len_id2score(id2score):
+        ret = 0
+        for v in id2score.values():
+            ret += len(v)
+        return ret
+    
+    scores = token_level_rewards.sum(dim=-1)
+
+    home = "/workspace/GRPO/models/grpo-hist-clip-1_0"
+    if not os.path.exists(home):
+        os.makedirs(home, exist_ok=True)
+        print(f"Directory created: {home}")
+    else:
+        print(f"Directory already exists: {home}")
+        
     id2score_path = os.path.join(home, 'id2score.json')
 
     if os.path.exists(id2score_path):    

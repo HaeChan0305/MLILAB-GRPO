@@ -9,16 +9,16 @@ exp_name='clipcov'
 
 adv_estimator=grpo
 
-use_kl_in_reward=False
-kl_coef=0.0
-use_kl_loss=False
-kl_loss_coef=0.0
+use_kl_in_reward=False # d
+kl_coef=0.0 # d
+use_kl_loss=False # d
+kl_loss_coef=0.0 # d
 
-clip_ratio_low=1
-clip_ratio_high=1
-clip_cov_ratio=0.0002
-clip_cov_lb=1.0
-clip_cov_ub=5.0
+clip_ratio_low=1 # d
+clip_ratio_high=1 # d
+clip_cov_ratio=0.0002 # d
+clip_cov_lb=1.0 # d
+clip_cov_ub=5.0 # d
 
 max_prompt_length=$((1024 * 2))
 max_response_length=$((1024 * 8))
@@ -26,8 +26,8 @@ enable_overlong_buffer=False
 overlong_buffer_len=$((1024 * 2))
 overlong_penalty_factor=1.0
 
-loss_agg_mode="token-mean"
-loss_mode="clip_cov"
+loss_agg_mode="token-mean" # d
+loss_mode="clip_cov" # d
 enable_filter_groups=True
 filter_groups_metric=acc
 max_num_gen_batches=10

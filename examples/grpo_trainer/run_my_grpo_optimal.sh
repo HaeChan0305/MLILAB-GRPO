@@ -6,10 +6,10 @@ export VLLM_USE_V1='1'
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
-export WANDB_RUN_ID="i7xhi32l"
+# export WANDB_RUN_ID="i7xhi32l"
 export HYDRA_FULL_ERROR=1
 # export VLLM_ATTENTION_BACKEND=XFORMERS
-export WANDB_RESUME='must'
+# export WANDB_RESUME='must'
 
 
 python3 -m verl.trainer.main_ppo \
