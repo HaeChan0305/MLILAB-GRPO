@@ -396,7 +396,10 @@ def process_validation_metrics(
                     continue
 
                 metric = {}
+                # var_vals : List of rewards(float)
                 n_resps = len(var_vals)
+                
+                metric[f"pass@{n_resps}"] = 0.0 if sum(var_vals) == 0.0 else 1.0 # WARNING!! : This is working for the only reward system without format and length reward.
                 metric[f"mean@{n_resps}"] = np.mean(var_vals)
 
                 if n_resps > 1:

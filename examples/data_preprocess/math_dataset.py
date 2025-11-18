@@ -42,8 +42,8 @@ if __name__ == "__main__":
     dataset = datasets.load_dataset(data_source, trust_remote_code=True)
 
 
-    train_dataset = dataset["train"].select(range(32))
-    test_dataset = dataset["test"]
+    train_dataset = dataset["train"]
+    # test_dataset = dataset["test"]
 
     instruction_following = "Let's think step by step and output the final answer within \\boxed{}.\n\n"
 
@@ -75,13 +75,15 @@ if __name__ == "__main__":
         return process_fn
 
     train_dataset = train_dataset.map(function=make_map_fn("train"), with_indices=True)
-    test_dataset = test_dataset.map(function=make_map_fn("test"), with_indices=True)
+    print(len(train_dataset))
+    # test_dataset = test_dataset.map(function=make_map_fn("test"), with_indices=True)
+    # print(len(train_dataset))
 
     local_dir = args.local_dir
     hdfs_dir = args.hdfs_dir
 
-    train_dataset.to_parquet(os.path.join(local_dir, "train_example_32.parquet"))
-    test_dataset.to_parquet(os.path.join(local_dir, "test_example_32.parquet"))
+    train_dataset.to_parquet(os.path.join(local_dir, "train_init_const.parquet"))
+    # test_dataset.to_parquet(os.path.join(local_dir, "test_example_33.parquet"))
 
     if hdfs_dir is not None:
         makedirs(hdfs_dir)

@@ -1,16 +1,16 @@
 set -x
 
 export CUDA_DEVICE_ORDER="PCI_BUS_ID"
-export CUDA_VISIBLE_DEVICES="0,1,2,3"
+export CUDA_VISIBLE_DEVICES="4,5,6,7"
 export VLLM_USE_V1='1'
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
-export WANDB_RUN_ID="fxy2i73t"
+# export WANDB_RUN_ID="xrmg347f"
 export HYDRA_FULL_ERROR=1
-export WANDB_RESUME='must'
+# export WANDB_RESUME='must'
 
-experiment_name="grpo-hist-clip-1_0"
+experiment_name="grpo-hist-clip-1_0-clipc-10-nokl-lr-1e-7"
 
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpohist2 \
@@ -26,15 +26,16 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.model.enable_gradient_checkpointing=True \
     actor_rollout_ref.model.enable_activation_offload=True \
-    actor_rollout_ref.actor.optim.lr=1e-6 \
+    actor_rollout_ref.actor.optim.lr=1e-7 \
     actor_rollout_ref.actor.ppo_mini_batch_size=8 \
     actor_rollout_ref.actor.use_dynamic_bsz=True \
     actor_rollout_ref.actor.ppo_max_token_len_per_gpu=$(((1024 + 4096) * 2)) \
-    actor_rollout_ref.actor.use_kl_loss=True \
-    actor_rollout_ref.actor.kl_loss_coef=0.001 \
+    actor_rollout_ref.actor.use_kl_loss=False \
+    actor_rollout_ref.actor.kl_loss_coef=0.0 \
     actor_rollout_ref.actor.kl_loss_type=low_var_kl \
     actor_rollout_ref.actor.clip_ratio_low=1.0 \
     actor_rollout_ref.actor.clip_ratio_high=1.0 \
+    actor_rollout_ref.actor.clip_ratio_c=10.0 \
     actor_rollout_ref.actor.entropy_coeff=0 \
     actor_rollout_ref.actor.fsdp_config.param_offload=True \
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=True \
@@ -46,6 +47,7 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.max_num_batched_tokens=$(((1024 + 4096) * 8)) \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
     algorithm.use_kl_in_reward=False \
+    algorithm.kl_ctrl.kl_coef=0.0 \
     trainer.critic_warmup=0 \
     trainer.logger=['console','wandb'] \
     trainer.project_name='verl_grpo_prev_epoch_qwen2_5_1_5b_MATH' \

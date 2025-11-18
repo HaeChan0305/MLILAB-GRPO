@@ -191,6 +191,14 @@ algorithm:
     # Power used for weight scaling in "pow" method
     weight_pow: 2.0
 
+  history:
+    path: None
+    save_freq: 20
+    rollout_n: 8
+    discount: 1.0
+    alpha_init: 1.0
+    beta_init: 1.0
+
 # config for the trainer
 trainer:
 

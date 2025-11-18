@@ -17,7 +17,7 @@ from typing import Any, Optional
 
 from verl.base_config import BaseConfig
 
-__all__ = ["AlgoConfig", "FilterGroupsConfig", "KLControlConfig"]
+__all__ = ["AlgoConfig", "FilterGroupsConfig", "KLControlConfig", "HistoryConfig"]
 
 
 @dataclass
@@ -57,6 +57,16 @@ class FilterGroupsConfig(BaseConfig):
 
 
 @dataclass
+class HistoryConfig(BaseConfig):
+    path: str = None
+    save_freq: int = 20
+    rollout_n: int = 8
+    discount: float = 1.0
+    alpha_init: float = 1.0
+    beta_init: float = 1.0
+
+
+@dataclass
 class AlgoConfig(BaseConfig):
     """Configuration for the algorithm.
 
@@ -85,3 +95,4 @@ class AlgoConfig(BaseConfig):
     use_pf_ppo: bool = False
     pf_ppo: dict[str, Any] = field(default_factory=dict)
     filter_groups: Optional[FilterGroupsConfig] = None
+    history: Optional[HistoryConfig] = None

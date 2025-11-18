@@ -13,7 +13,7 @@ export WANDB_API_KEY="79f4decc1667e5ef75c38f236c356ee5cc1c764b"
 export WANDB_RESUME='must'
 
 
-exp_name='grpo-entropy-default-2'
+exp_name='grpo-hist-entropy'
 
 use_kl_in_reward=False
 kl_coef=0.0
@@ -28,7 +28,7 @@ clip_cov_lb=1.0
 clip_cov_ub=5.0
 
 python3 -m recipe.entropy.main_entropy \
-    algorithm.adv_estimator=grpo \
+    algorithm.adv_estimator=grpohist2 \
     data.train_files=/workspace/GRPO/data/MATH/train.parquet \
     data.val_files=/workspace/GRPO/data/MATH500/test.parquet \
     data.train_batch_size=32 \

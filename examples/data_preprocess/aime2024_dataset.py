@@ -39,14 +39,14 @@ if __name__ == "__main__":
     print(f"Loading the {data_source} dataset from huggingface...", flush=True)
     test_dataset = datasets.load_dataset(data_source)['train']
 
-    instruction_following = "Let's think step by step and output the final answer within \\boxed{}."
+    instruction_following = "Let's think step by step and output the final answer within \\boxed{}.\n\n"
 
     # add a row to each data item that represents a unique id
     def make_map_fn(split):
         def process_fn(example, idx):
             question = example.pop("Problem")
 
-            question = question + " " + instruction_following
+            question = instruction_following + question
 
             answer = example.pop("Answer")
             data = {

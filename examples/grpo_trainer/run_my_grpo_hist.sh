@@ -6,11 +6,11 @@ export VLLM_USE_V1='1'
 export WANDB_PROJECT="GRPO"
 export WANDB_ENTITY="haechan-kaist"  # optional if using teams
 export WANDB_MODE="online"  # or "offline", "disabled"
-# export WANDB_RUN_ID="cafip5yz"
+export WANDB_RUN_ID="wsx0egfw"
 export HYDRA_FULL_ERROR=1
-# export WANDB_RESUME='must'
+export WANDB_RESUME='must'
 
-experiment_name="grpo-hist-clip-1_0-clipc-10-nokl"
+experiment_name="qwen3-grpo-hist-clip-1_0-clipc-10-nokl-lr-0.5e-6"
 
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpohist \
@@ -22,11 +22,11 @@ python3 -m verl.trainer.main_ppo \
     data.max_response_length=4096 \
     data.filter_overlong_prompts=True \
     data.truncation='error' \
-    actor_rollout_ref.model.path=Qwen/Qwen2.5-1.5B \
+    actor_rollout_ref.model.path=Qwen/Qwen3-1.7B-Base \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.model.enable_gradient_checkpointing=True \
     actor_rollout_ref.model.enable_activation_offload=True \
-    actor_rollout_ref.actor.optim.lr=1e-6 \
+    actor_rollout_ref.actor.optim.lr=0.5e-6 \
     actor_rollout_ref.actor.ppo_mini_batch_size=8 \
     actor_rollout_ref.actor.use_dynamic_bsz=True \
     actor_rollout_ref.actor.ppo_max_token_len_per_gpu=$(((1024 + 4096) * 2)) \
@@ -57,7 +57,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.save_freq=20 \
     trainer.default_local_dir="/workspace/GRPO/models/$experiment_name" \
     trainer.test_freq=20 \
-    trainer.total_epochs=6 \
+    trainer.total_epochs=12 \
     trainer.val_before_train=False $@
 
 python3 ../send_msg.py

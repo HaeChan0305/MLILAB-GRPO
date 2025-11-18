@@ -298,7 +298,7 @@ class DataParallelPPOActor(BasePPOActor):
         return grad_norm
 
     @GPUMemoryLogger(role="dp actor", logger=logger)
-    def compute_log_prob(self, data: DataProto, calculate_entropy=False) -> torch.Tensor:
+    def compute_log_prob(self, data: DataProto, calculate_entropy=False) -> torch.Tensor: # haechan : (RePO) 여기서 old_log_prob, token을 Dict 형태로 저장하고, off-policy 단계에서 load해올 것. 
         """Compute the log probability of the responses given input_ids, attention_mask and position_ids
 
         Args:

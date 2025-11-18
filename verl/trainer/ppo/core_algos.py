@@ -22,6 +22,7 @@ __all__ = ["register_adv_est", "get_adv_estimator_fn", "AdvantageEstimator"]
 
 import os
 import json
+import math
 
 from collections import defaultdict
 from enum import Enum
@@ -107,6 +108,8 @@ class AdvantageEstimator(str, Enum):
     ABSPO = "abspo"
     GRPOHIST = "grpohist"
     GRPOHIST2 = "grpohist2"
+    GRPOHISTBETA = "grpohistbeta"
+    REPO = "repo"
 
 
 ADV_ESTIMATOR_REGISTRY: dict[str, Any] = {}
@@ -329,6 +332,186 @@ def compute_grpo_outcome_advantage(
 
     return scores, scores
 
+@register_adv_est(AdvantageEstimator.REPO)  # or simply: @register_adv_est("grpo")
+def compute_repo_outcome_advantage(
+    token_level_rewards: torch.Tensor,
+    response_mask: torch.Tensor,
+    index: np.ndarray,
+    epsilon: float = 1e-6,
+    norm_adv_by_std_in_grpo: bool = True,
+    config: Optional[AlgoConfig] = None,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """
+    Compute advantage for GRPO, operating only on Outcome reward
+    (with only one scalar reward for each response).
+
+    Args:
+        token_level_rewards: `(torch.Tensor)`
+            shape is (bs, response_length)
+        response_mask: `(torch.Tensor)`
+            shape is (bs, response_length)
+        index: `(np.ndarray)`
+            index array for grouping
+        epsilon: `(float)`
+            small value to avoid division by zero
+        norm_adv_by_std_in_grpo: `(bool)`
+            whether to scale the GRPO advantage
+        config: `(Optional[AlgoConfig])`
+            algorithm configuration object
+
+    Note:
+        If norm_adv_by_std_in_grpo is True, the advantage is scaled by the std, as in the original GRPO.
+        If False, the advantage is not scaled, as in Dr.GRPO (https://arxiv.org/abs/2503.20783).
+
+    Returns:
+        advantages: `(torch.Tensor)`
+            shape is (bs, response_length)
+        Returns: `(torch.Tensor)`
+            shape is (bs, response_length)
+    """
+    scores = token_level_rewards.sum(dim=-1)
+
+    id2score = defaultdict(list)
+    id2mean = {}
+    id2std = {}
+
+    with torch.no_grad():
+        bsz = scores.shape[0]
+        for i in range(bsz):
+            id2score[index[i]].append(scores[i])
+        for idx in id2score:
+            if len(id2score[idx]) == 1:
+                id2mean[idx] = torch.tensor(0.0)
+                id2std[idx] = torch.tensor(1.0)
+            elif len(id2score[idx]) > 1:
+                scores_tensor = torch.stack(id2score[idx])
+                id2mean[idx] = torch.mean(scores_tensor)
+                id2std[idx] = torch.std(scores_tensor)
+            else:
+                raise ValueError(f"no score in prompt index: {idx}")
+        for i in range(bsz):
+            if norm_adv_by_std_in_grpo:
+                scores[i] = (scores[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)
+            else:
+                scores[i] = scores[i] - id2mean[index[i]]
+        scores = scores.unsqueeze(-1) * response_mask
+
+    return scores, scores
+
+# NOTE(sgm): this implementation only consider outcome supervision, where the reward is a scalar.
+@register_adv_est(AdvantageEstimator.GRPOHISTBETA)
+def compute_grpohistbeta_outcome_advantage(
+    token_level_rewards: torch.Tensor,
+    response_mask: torch.Tensor,
+    index: np.ndarray,
+    epsilon: float = 1e-6,
+    norm_adv_by_std_in_grpo: bool = True,
+    config: Optional[AlgoConfig] = None,
+    epoch: Optional[int] = None,
+    step: Optional[int] = None,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """
+    !!!WARNING!!!
+    현재 이 알고리즘은 len(train_dataset) % batch_size == 0 일 때 작동함. 
+    
+    Compute advantage for GRPO, operating only on Outcome reward
+    (with only one scalar reward for each response).
+
+    Args:
+        token_level_rewards: `(torch.Tensor)`
+            shape is (bs, response_length)
+        response_mask: `(torch.Tensor)`
+            shape is (bs, response_length)
+        index: `(np.ndarray)`
+            index array for grouping
+        epsilon: `(float)`
+            small value to avoid division by zero
+        norm_adv_by_std_in_grpo: `(bool)`
+            whether to scale the GRPO advantage
+        config: `(Optional[AlgoConfig])`
+            algorithm configuration object
+
+    Note:
+        If norm_adv_by_std_in_grpo is True, the advantage is scaled by the std, as in the original GRPO.
+        If False, the advantage is not scaled, as in Dr.GRPO (https://arxiv.org/abs/2503.20783).
+
+    Returns:
+        advantages: `(torch.Tensor)`
+            shape is (bs, response_length)
+        Returns: `(torch.Tensor)`
+            shape is (bs, response_length)
+    """
+    
+    scores = token_level_rewards.sum(dim=-1)
+
+    home = config.history.path
+    if not os.path.exists(home):
+        os.makedirs(home, exist_ok=True)
+        print(f"Directory created: {home}")
+    else:
+        print(f"Directory already exists: {home}")
+        
+    id2score_path = os.path.join(home, 'id2score.json')
+
+    if os.path.exists(id2score_path):    
+        with open(id2score_path, "r") as f:
+            id2score = json.load(f)
+    else:
+        id2score = defaultdict(list)
+    
+    id2mean = {}
+    id2std = {}
+
+    with torch.no_grad():
+        bsz = scores.shape[0]
+        for i in range(bsz):
+            key = str(index[i])
+            if not key in id2score.keys():
+                id2score[key] = []
+            
+            if len(id2score[key]) == epoch:
+                id2score[key].append({"epoch"  : epoch + 1, 
+                                      "reward" : [scores[i].item()]})
+
+            elif len(id2score[key]) == epoch + 1:
+                assert id2score[key][epoch]["epoch"] == epoch + 1
+                assert len(id2score[key][epoch]["reward"]) < config.history.rollout_n
+                id2score[key][epoch]["reward"].append(scores[i].item())
+
+            else:
+                assert 0, "len(valid_train_dataset) % batch_size != 0"
+                
+        for idx in np.unique(index):
+            key = str(idx)
+            assert len(id2score[key][epoch]["reward"]) == config.history.rollout_n
+            
+            alpha_prev = config.history.alpha_init if epoch == 0 else id2score[key][epoch-1]["alpha"]
+            beta_prev = config.history.beta_init if epoch == 0 else id2score[key][epoch-1]["beta"]
+            id2score[key][epoch]["alpha"] = config.history.discount * alpha_prev + sum(id2score[key][epoch]["reward"])
+            id2score[key][epoch]["beta"] = config.history.discount * beta_prev + config.history.rollout_n - sum(id2score[key][epoch]["reward"])
+            
+            a = id2score[key][epoch]["alpha"]
+            b = id2score[key][epoch]["beta"]
+            id2mean[key] = a / (a + b)
+            id2std[key] = math.sqrt(((a * b) / ((a + b) * (a + b + 1))) * (1 + (1 / (a+b))))
+                
+        with open(id2score_path, "w") as f:
+            json.dump(id2score, f, indent=2)
+        
+        if step % config.history.save_freq == 0:
+            with open(os.path.join(home, f'id2score_step_{step}.json'), "w") as f:
+                json.dump(id2score, f, indent=2)
+            
+        for i in range(bsz):
+            key = str(index[i])
+            if norm_adv_by_std_in_grpo:
+                scores[i] = (scores[i] - id2mean[key]) / (id2std[key])
+            else:
+                scores[i] = scores[i] - id2mean[key]
+        scores = scores.unsqueeze(-1) * response_mask
+
+    return scores, scores
+
 # NOTE(sgm): this implementation only consider outcome supervision, where the reward is a scalar.
 @register_adv_est(AdvantageEstimator.GRPOHIST)
 def compute_grpohist_outcome_advantage(
@@ -375,7 +558,7 @@ def compute_grpohist_outcome_advantage(
     
     scores = token_level_rewards.sum(dim=-1)
 
-    home = "/workspace/GRPO/models/grpo-hist-clip-1_0-clipc-10-nokl"
+    home = "/workspace/GRPO/models/qwen3-grpo-hist-clip-1_0-clipc-10-nokl-lr-0.5e-6"
     if not os.path.exists(home):
         os.makedirs(home, exist_ok=True)
         print(f"Directory created: {home}")
@@ -476,7 +659,7 @@ def compute_grpohist2_outcome_advantage(
     
     scores = token_level_rewards.sum(dim=-1)
 
-    home = "/workspace/GRPO/models/grpo-hist-clip-1_0"
+    home = "/workspace/GRPO/models/grpo-hist-clip-1_0-clipc-10-nokl-lr-1e-7"
     if not os.path.exists(home):
         os.makedirs(home, exist_ok=True)
         print(f"Directory created: {home}")

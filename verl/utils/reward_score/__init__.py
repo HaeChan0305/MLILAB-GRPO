@@ -44,7 +44,7 @@ def default_compute_score(
         from . import gsm8k
 
         res = gsm8k.compute_score(solution_str, ground_truth)
-    elif data_source in ["DigitalLearningGmbH/MATH-lighteval", "HuggingFaceH4/MATH-500", "Maxwell-Jia/AIME_2024", "opencompass/AIME2025", "agentica-org/DeepScaleR-Preview-Dataset"]:
+    elif data_source in ["DigitalLearningGmbH/MATH-lighteval", "HuggingFaceH4/MATH-500", "Maxwell-Jia/AIME_2024", "opencompass/AIME2025", "math-ai/minervamath", "Hothan/OlympiadBench", "math-ai/amc23", "rawsh/2024_AMC12", "agentica-org/DeepScaleR-Preview-Dataset"]:
         from . import math_haechan
         
         res = math_haechan.compute_score(solution_str, ground_truth)
