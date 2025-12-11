@@ -59,7 +59,7 @@ class FilterGroupsConfig(BaseConfig):
 @dataclass
 class HistoryConfig(BaseConfig):
     path: str = None
-    save_freq: int = 20
+    save_freq: int = None
     rollout_n: int = 8
     discount: float = 1.0
     alpha_init: float = 1.0

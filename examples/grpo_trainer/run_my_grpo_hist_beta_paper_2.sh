@@ -3,26 +3,26 @@ set -x
 export CUDA_DEVICE_ORDER="PCI_BUS_ID"
 export CUDA_VISIBLE_DEVICES="0,1,2,3"
 export VLLM_USE_V1='1'
-export WANDB_PROJECT="GRPO"
-export WANDB_ENTITY="haechan-kaist"  # optional if using teams
-export WANDB_MODE="online"  # or "offline", "disabled"
-# export WANDB_RUN_ID="wsx0egfw"
+# export WANDB_PROJECT="GRPO"
+# export WANDB_ENTITY="haechan-kaist"  # optional if using teams
+# export WANDB_MODE="online"  # or "offline", "disabled"
+# export WANDB_RUN_ID="bi1c7i8d"
 export HYDRA_FULL_ERROR=1
 # export WANDB_RESUME='must'
 
-experiment_name="qwen3-grpohistbeta-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6"
+experiment_name="qwen3-grpo-test"
 save_path="/workspace/GRPO/models/$experiment_name"
-freq=5
-rollout=8
+freq=4
+rollout=4
 
 python3 -m verl.trainer.main_ppo \
-    algorithm.adv_estimator=grpohistbeta \
-    data.train_files=/workspace/GRPO/data/MATH/train_example_7431.parquet \
+    algorithm.adv_estimator=grpo \
+    data.train_files=/workspace/GRPO/data/MATH/train_example_32.parquet \
     data.val_files=[/workspace/GRPO/data/MATH500/test.parquet,/workspace/GRPO/data/AIME2024/test.parquet,/workspace/GRPO/data/AIME2025/test.parquet,/workspace/GRPO/data/Minerva/test.parquet,/workspace/GRPO/data/AMC2023/test.parquet,/workspace/GRPO/data/AMC2024/test.parquet] \
-    data.train_batch_size=128 \
+    data.train_batch_size=8 \
     data.val_batch_size=128 \
     data.max_prompt_length=1024 \
-    data.max_response_length=4096 \
+    data.max_response_length=256 \
     data.filter_overlong_prompts=True \
     data.truncation='error' \
     actor_rollout_ref.model.path=Qwen/Qwen3-1.7B-Base \
@@ -31,7 +31,7 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.model.enable_activation_offload=True \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.actor.optim.weight_decay=0 \
-    actor_rollout_ref.actor.ppo_mini_batch_size=64 \
+    actor_rollout_ref.actor.ppo_mini_batch_size=8 \
     actor_rollout_ref.actor.use_dynamic_bsz=True \
     actor_rollout_ref.actor.ppo_max_token_len_per_gpu=$(((1024 + 4096) * 2)) \
     actor_rollout_ref.actor.use_kl_loss=False \
@@ -67,17 +67,18 @@ python3 -m verl.trainer.main_ppo \
     algorithm.history.alpha_init=1.0 \
     algorithm.history.beta_init=1.0 \
     trainer.critic_warmup=0 \
-    trainer.logger=['console','wandb'] \
+    trainer.logger=['console'] \
     trainer.project_name='verl_grpo_prev_epoch_qwen2_5_1_5b_MATH' \
     trainer.experiment_name=$experiment_name \
     trainer.n_gpus_per_node=4 \
     trainer.nnodes=1 \
     trainer.save_freq=$freq \
     trainer.default_local_dir=$save_path \
-    trainer.test_freq=$freq \
+    trainer.test_freq=1024 \
     trainer.total_epochs=6 \
-    trainer.val_before_train=True $@
+    trainer.val_before_train=False $@
 
-python3 ../send_msg.py
+# python3 ../send_msg.py
 
 # trainer.rollout_data_dir='/workspace/GRPO/models/verl_grpohist_qwen2_5_1_5b_MATH/rollout' \
+# trainer.logger=['console','wandb'] \

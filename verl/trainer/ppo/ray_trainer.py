@@ -268,30 +268,17 @@ def compute_advantage(
         advantages, returns = core_algos.compute_grpo_outcome_advantage(
             token_level_rewards=data.batch["token_level_rewards"],
             response_mask=grpo_calculation_mask,
-            index=data.non_tensor_batch["uid"],
+            index=data.non_tensor_batch["index"],
             norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
-        )
-        data.batch["advantages"] = advantages
-        data.batch["returns"] = returns
-    elif adv_estimator == AdvantageEstimator.REPO:
-        # Initialize the mask for GRPO calculation
-        grpo_calculation_mask = data.batch["response_mask"]
-        # Call compute_grpo_outcome_advantage with parameters matching its definition
-        advantages, returns = core_algos.compute_repo_outcome_advantage(
-            token_level_rewards=data.batch["token_level_rewards"],
-            response_mask=grpo_calculation_mask,
-            index=data.non_tensor_batch["uid"],
-            norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
+            config=config,
+            epoch=epoch,
+            step=step,
         )
         data.batch["advantages"] = advantages
         data.batch["returns"] = returns
     elif adv_estimator == AdvantageEstimator.GRPOHISTBETA:
         # Initialize the mask for GRPO calculation
         grpo_calculation_mask = data.batch["response_mask"]
-        # import pickle
-        # with open("/workspace/GRPO/MLILAB-GRPO/data.pkl", 'wb') as file:
-        #     pickle.dump(data, file)
-        # assert 0
         # Call compute_grpo_outcome_advantage with parameters matching its definition
         advantages, returns = core_algos.compute_grpohistbeta_outcome_advantage(
             token_level_rewards=data.batch["token_level_rewards"],
@@ -1070,6 +1057,20 @@ class RayPPOTrainer:
         else:
             print(f"Warning: No dataloader state found at {dataloader_local_path}, will start from scratch")
 
+        # load id2score
+        if self.config.algorithm.adv_estimator == AdvantageEstimator.GRPOHISTBETA or self.config.algorithm.adv_estimator == AdvantageEstimator.GRPO:
+            id2score_path = os.path.join(self.config.algorithm.history.path, f'id2score_step_{self.global_steps}.json')
+            id2score_path_deprecated = os.path.join(self.config.algorithm.history.path, 'id2score.json')
+
+            assert os.path.exists(id2score_path), f"{id2score_path} does not exist"
+            assert os.path.exists(id2score_path_deprecated), f"{id2score_path_deprecated} does not exist"
+            
+            with open(id2score_path, "r") as f:
+                id2score = json.load(f)
+            with open(id2score_path_deprecated, "w") as f:
+                json.dump(id2score, f, indent=2)
+                
+
     def _start_profiling(self, do_profile: bool) -> None:
         """Start profiling for all worker groups if profiling is enabled."""
         if do_profile:
@@ -1132,6 +1133,9 @@ class RayPPOTrainer:
         # load checkpoint before doing anything
         self._load_checkpoint()
 
+        # train dataset length
+        assert len(self.train_dataset) % self.config.data.train_batch_size == 0, f"train dataset length {len(self.train_dataset)} is not divisible by batch size {self.config.data.train_batch_size}"
+        self.steps_per_epoch = len(self.train_dataset) // self.config.data.train_batch_size
         # perform validation before training
         # currently, we only support validation using the reward_function.
         if self.val_reward_fn is not None and self.config.trainer.get("val_before_train", True):
@@ -1333,7 +1337,7 @@ class RayPPOTrainer:
                             num_repeat=self.config.actor_rollout_ref.rollout.n,
                             norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
                             config=self.config.algorithm,
-                            epoch=epoch,
+                            epoch=(self.global_steps // self.steps_per_epoch) + (0 if self.global_steps % self.steps_per_epoch else -1),
                             step=self.global_steps,
                         )
 

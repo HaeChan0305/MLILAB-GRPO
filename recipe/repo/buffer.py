@@ -1,5 +1,6 @@
 import os 
 import pickle
+import numpy as np
 from verl import DataProto
 from tensordict import TensorDict
 
@@ -19,9 +20,13 @@ class Buffer:
             assert self.global_step == 0, f"Buffer directory is empty, but global_step is {self.global_step}"
             self.buffer = []
         else:
-            self._load(self)
+            steps = [int(file.split(".pkl")[0].split("buffer_step_")[1]) for file in os.listdir(self.buffer_dir)]
+            max_step = max(steps)
+            assert max_step == self.global_step, f"Buffer directory has steps {max_step}, but global_step is {self.global_step}"
+            self._load()
     
     def update(self, epoch: int, step: int, batch: DataProto):
+        self.epoch = epoch
         self.global_step = step
         self.buffer.append({"epoch": epoch, "step": step, "batch": batch})
     
@@ -48,30 +53,45 @@ class Buffer:
         # 2 step에 35MB
 
 
-    def make_off_policy_batch(self, batch: DataProto) -> DataProto:
+    def make_off_policy_batch(self, batch: DataProto, target_epoch: int) -> DataProto:
+        assert target_epoch < self.epoch, f"Epoch must be less than current epoch. Current epoch: {self.epoch}, requested epoch: {target_epoch}"
+    
         off_policy_batch = DataProto()
+
+        # Case : first epoch
+        if target_epoch < 0: 
+            return off_policy_batch
+
         for query_idx in set(batch.non_tensor_batch['index']):
             for entry in self.buffer:
+                if entry['epoch'] != target_epoch:
+                    continue
+                
                 subbatch = self._extract_subbatch(entry['batch'], query_idx)
                 if subbatch is None:
                     continue
                 else:
-                    if not off_policy_batch.batch:
+                    if not off_policy_batch:
                         off_policy_batch.batch = subbatch.batch
                         off_policy_batch.non_tensor_batch = subbatch.non_tensor_batch
                         off_policy_batch.meta_info = subbatch.meta_info
                     else:
                         off_policy_batch.batch = TensorDict.cat([off_policy_batch.batch, subbatch.batch], dim=0)
                         for k in off_policy_batch.non_tensor_batch.keys():
-                            off_policy_batch.non_tensor_batch[k].extend(subbatch.non_tensor_batch[k])
+                            off_policy_batch.non_tensor_batch[k] = np.concatenate([
+                                off_policy_batch.non_tensor_batch[k], 
+                                subbatch.non_tensor_batch[k]
+                            ], axis=0)
                         for k in off_policy_batch.meta_info.keys():
                             if k == 'global_token_num':
                                 off_policy_batch.meta_info[k].extend(subbatch.meta_info[k])
                             else:
                                 if off_policy_batch.meta_info[k] != subbatch.meta_info[k]:
                                     print(f"Warning: meta_info key '{k}' has different values across subbatches.")
-        if off_policy_batch.batch:
-            return off_policy_batch
+        
+        assert off_policy_batch.batch is not None, f"No off-policy batch found for epoch {target_epoch}"
+        assert off_policy_batch.batch.batch_size[0] == batch.batch.batch_size[0], f"Off-policy batch size is not equal to original batch size. Original batch size: {batch.batch.batch_size[0]}, off-policy batch size: {off_policy_batch.batch.batch_size[0]}"
+        return off_policy_batch
     
     def _extract_subbatch(self, batch: DataProto, query_idx: int) -> DataProto:
         indices = []
@@ -87,7 +107,8 @@ class Buffer:
                                     {k: v[indices] for k, v in batch.batch.items()},
                                     batch_size=len(indices),
                                     )
-        subbatch.non_tensor_batch = {k: [v[i] for i in indices] for k, v in batch.non_tensor_batch.items()}
+        subbatch.non_tensor_batch = {k: v[indices] for k, v in batch.non_tensor_batch.items()}
         subbatch.meta_info = {k: [v[i] for i in indices] if k == 'global_token_num' else v for k, v in batch.meta_info.items()}
+
         return subbatch
 

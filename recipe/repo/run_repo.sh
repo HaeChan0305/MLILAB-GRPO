@@ -10,19 +10,19 @@ export WANDB_MODE="online"  # or "offline", "disabled"
 export HYDRA_FULL_ERROR=1
 # export WANDB_RESUME='must'
 
-experiment_name="qwen3-repo-test"
+experiment_name="qwen3-repo-test-3"
 save_path="/workspace/GRPO/models/$experiment_name"
 freq=2
-rollout=8
+rollout=4
 
 python3 -m recipe.repo.main_repo \
     algorithm.adv_estimator=grpo \
-    data.train_files=/workspace/GRPO/data/MATH/train_example_7431.parquet \
-    data.val_files=[/workspace/GRPO/data/MATH500/test.parquet,/workspace/GRPO/data/AIME2024/test.parquet,/workspace/GRPO/data/AIME2025/test.parquet,/workspace/GRPO/data/Minerva/test.parquet,/workspace/GRPO/data/OlympiadBench/test.parquet,/workspace/GRPO/data/AMC2023/test.parquet,/workspace/GRPO/data/AMC2024/test.parquet] \
+    data.train_files=/workspace/GRPO/data/MATH/train_example_32.parquet \
+    data.val_files=[/workspace/GRPO/data/MATH500/test.parquet] \
     data.train_batch_size=8 \
     data.val_batch_size=8 \
     data.max_prompt_length=1024 \
-    data.max_response_length=4096 \
+    data.max_response_length=1024 \
     data.filter_overlong_prompts=True \
     data.truncation='error' \
     actor_rollout_ref.model.path=Qwen/Qwen3-1.7B-Base \
@@ -37,8 +37,8 @@ python3 -m recipe.repo.main_repo \
     actor_rollout_ref.actor.use_kl_loss=False \
     actor_rollout_ref.actor.kl_loss_coef=0.0 \
     actor_rollout_ref.actor.kl_loss_type=low_var_kl \
-    actor_rollout_ref.actor.clip_ratio_low=0.2 \
     actor_rollout_ref.actor.clip_ratio_high=0.28 \
+    actor_rollout_ref.actor.clip_ratio_low=0.2 \
     actor_rollout_ref.actor.clip_ratio_c=3.0 \
     actor_rollout_ref.actor.entropy_coeff=0 \
     actor_rollout_ref.actor.fsdp_config.param_offload=True \
@@ -68,7 +68,7 @@ python3 -m recipe.repo.main_repo \
     trainer.nnodes=1 \
     trainer.save_freq=$freq \
     trainer.default_local_dir=$save_path \
-    trainer.test_freq=$freq \
+    trainer.test_freq=20 \
     trainer.total_epochs=6 \
     trainer.val_before_train=False $@
 

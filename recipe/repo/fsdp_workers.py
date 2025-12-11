@@ -34,6 +34,7 @@ from peft import LoraConfig, TaskType, get_peft_model
 from safetensors.torch import save_file
 from torch.distributed.device_mesh import init_device_mesh
 from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
+from tensordict import TensorDict
 
 import verl.utils.torch_functional as verl_F
 from verl import DataProto
@@ -696,11 +697,30 @@ class RePORolloutRefWorker(Worker, DistProfilerExtension):
                 checkpoint_config=checkpoint_contents,
             )
 
+    def _concatenate_data(self, data: DataProto, data_off: DataProto):
+        data.batch = TensorDict.cat([data.batch, data_off.batch], dim=0)
+        for k in data.non_tensor_batch.keys():
+            data.non_tensor_batch[k] = np.concatenate([
+                                data.non_tensor_batch[k], 
+                                data_off.non_tensor_batch[k]
+                            ], axis=0)
+        for k in data.meta_info.keys():
+            if k == 'global_token_num':
+                data.meta_info[k].extend(data_off.meta_info[k])
+            else:
+                if data.meta_info[k] != data_off.meta_info[k]:
+                    print(f"Warning: meta_info key '{k}' has different values across subbatches.")
+
+        return data
+
     @register(dispatch_mode=make_nd_compute_dataproto_dispatch_fn(mesh_name="actor"))
     @DistProfiler.annotate(color="red", role="actor_update")
-    def update_actor(self, data: DataProto):
+    def update_actor(self, data: DataProto, data_off: DataProto): # data = on-policy batch
         # Support all hardwares
         data = data.to(get_device_id())
+        if data_off:
+            data_off = data_off.to(get_device_id())
+            data = self._concatenate_data(data, data_off)
 
         assert self._is_actor
         if self._is_offload_param:
@@ -712,6 +732,7 @@ class RePORolloutRefWorker(Worker, DistProfilerExtension):
             # perform training
             with Timer(name="update_policy", logger=None) as timer:
                 metrics = self.actor.update_policy(data=data)
+                    
             delta_time = timer.last
             global_num_tokens = data.meta_info["global_token_num"]
             estimated_flops, promised_flops = self.flops_counter.estimate_flops(global_num_tokens, delta_time)
@@ -739,6 +760,7 @@ class RePORolloutRefWorker(Worker, DistProfilerExtension):
             log_gpu_memory_usage("After offload actor optimizer during update_actor", logger=logger)
 
         return output
+        
 
     @register(dispatch_mode=make_nd_compute_dataproto_dispatch_fn(mesh_name="rollout"))
     @DistProfiler.annotate(color="red", role="rollout_generate")

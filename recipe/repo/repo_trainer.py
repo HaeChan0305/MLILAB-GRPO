@@ -1343,8 +1343,8 @@ class RayRePOTrainer:
                             config=self.config.algorithm,
                             epoch=epoch,
                             step=self.global_steps,
-                        )
-
+                        )                    
+                    
                     # update critic
                     if self.use_critic:
                         with marked_timer("update_critic", timing_raw, color="pink"):
@@ -1358,7 +1358,9 @@ class RayRePOTrainer:
                         with marked_timer("update_actor", timing_raw, color="red"):
                             batch.meta_info["multi_turn"] = self.config.actor_rollout_ref.rollout.multi_turn.enable
                             self.buffer.update(epoch, self.global_steps, batch)
-                            actor_output = self.actor_rollout_wg.update_actor(batch)
+                            batch_off = self.buffer.make_off_policy_batch(batch, epoch-1)
+                            assert type(batch_off) == DataProto, f"batch_off is not a DataProto object. Type: {type(batch_off)}"
+                            actor_output = self.actor_rollout_wg.update_actor(batch, batch_off) # haechan : 여기서 loss가 전달되는거같음.
                         actor_output_metrics = reduce_metrics(actor_output.meta_info["metrics"])
                         metrics.update(actor_output_metrics)
 

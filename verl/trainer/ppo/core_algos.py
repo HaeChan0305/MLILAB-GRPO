@@ -109,7 +109,6 @@ class AdvantageEstimator(str, Enum):
     GRPOHIST = "grpohist"
     GRPOHIST2 = "grpohist2"
     GRPOHISTBETA = "grpohistbeta"
-    REPO = "repo"
 
 
 ADV_ESTIMATOR_REGISTRY: dict[str, Any] = {}
@@ -274,6 +273,8 @@ def compute_grpo_outcome_advantage(
     epsilon: float = 1e-6,
     norm_adv_by_std_in_grpo: bool = True,
     config: Optional[AlgoConfig] = None,
+    epoch: Optional[int] = None,
+    step: Optional[int] = None,
 ) -> tuple[torch.Tensor, torch.Tensor]:
     """
     Compute advantage for GRPO, operating only on Outcome reward
@@ -303,97 +304,78 @@ def compute_grpo_outcome_advantage(
         Returns: `(torch.Tensor)`
             shape is (bs, response_length)
     """
+    
+    assert epoch >= 0, f"epoch is negative: {epoch}"
+
     scores = token_level_rewards.sum(dim=-1)
 
     id2score = defaultdict(list)
     id2mean = {}
     id2std = {}
 
-    with torch.no_grad():
-        bsz = scores.shape[0]
-        for i in range(bsz):
-            id2score[index[i]].append(scores[i])
-        for idx in id2score:
-            if len(id2score[idx]) == 1:
-                id2mean[idx] = torch.tensor(0.0)
-                id2std[idx] = torch.tensor(1.0)
-            elif len(id2score[idx]) > 1:
-                scores_tensor = torch.stack(id2score[idx])
-                id2mean[idx] = torch.mean(scores_tensor)
-                id2std[idx] = torch.std(scores_tensor)
-            else:
-                raise ValueError(f"no score in prompt index: {idx}")
-        for i in range(bsz):
-            if norm_adv_by_std_in_grpo:
-                scores[i] = (scores[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)
-            else:
-                scores[i] = scores[i] - id2mean[index[i]]
-        scores = scores.unsqueeze(-1) * response_mask
+    home = config.history.path
+    if not os.path.exists(home):
+        os.makedirs(home, exist_ok=True)
+        print(f"Directory created: {home}")
+    else:
+        print(f"Directory already exists: {home}")
+        
+    id2score_path = os.path.join(home, 'id2score.json')
 
-    return scores, scores
-
-@register_adv_est(AdvantageEstimator.REPO)  # or simply: @register_adv_est("grpo")
-def compute_repo_outcome_advantage(
-    token_level_rewards: torch.Tensor,
-    response_mask: torch.Tensor,
-    index: np.ndarray,
-    epsilon: float = 1e-6,
-    norm_adv_by_std_in_grpo: bool = True,
-    config: Optional[AlgoConfig] = None,
-) -> tuple[torch.Tensor, torch.Tensor]:
-    """
-    Compute advantage for GRPO, operating only on Outcome reward
-    (with only one scalar reward for each response).
-
-    Args:
-        token_level_rewards: `(torch.Tensor)`
-            shape is (bs, response_length)
-        response_mask: `(torch.Tensor)`
-            shape is (bs, response_length)
-        index: `(np.ndarray)`
-            index array for grouping
-        epsilon: `(float)`
-            small value to avoid division by zero
-        norm_adv_by_std_in_grpo: `(bool)`
-            whether to scale the GRPO advantage
-        config: `(Optional[AlgoConfig])`
-            algorithm configuration object
-
-    Note:
-        If norm_adv_by_std_in_grpo is True, the advantage is scaled by the std, as in the original GRPO.
-        If False, the advantage is not scaled, as in Dr.GRPO (https://arxiv.org/abs/2503.20783).
-
-    Returns:
-        advantages: `(torch.Tensor)`
-            shape is (bs, response_length)
-        Returns: `(torch.Tensor)`
-            shape is (bs, response_length)
-    """
-    scores = token_level_rewards.sum(dim=-1)
-
-    id2score = defaultdict(list)
+    if os.path.exists(id2score_path):    
+        with open(id2score_path, "r") as f:
+            id2score = json.load(f)
+    else:
+        id2score = defaultdict(list)
+    
     id2mean = {}
     id2std = {}
-
+    
     with torch.no_grad():
         bsz = scores.shape[0]
         for i in range(bsz):
-            id2score[index[i]].append(scores[i])
-        for idx in id2score:
-            if len(id2score[idx]) == 1:
-                id2mean[idx] = torch.tensor(0.0)
-                id2std[idx] = torch.tensor(1.0)
-            elif len(id2score[idx]) > 1:
-                scores_tensor = torch.stack(id2score[idx])
-                id2mean[idx] = torch.mean(scores_tensor)
-                id2std[idx] = torch.std(scores_tensor)
+            key = str(index[i])
+            if not key in id2score.keys():
+                id2score[key] = []
+            
+            if len(id2score[key]) == epoch:
+                id2score[key].append({"epoch"  : epoch + 1, 
+                                      "reward" : [scores[i].item()]})
+
+            elif len(id2score[key]) == epoch + 1:
+                assert id2score[key][epoch]["epoch"] == epoch + 1
+                assert len(id2score[key][epoch]["reward"]) < config.history.rollout_n, f"{key}, {len(id2score[key][epoch]['reward'])}, {config.history.rollout_n}, {epoch}, {step}, {index}"
+                id2score[key][epoch]["reward"].append(scores[i].item())
+
+            else:
+                assert 0, f"len(valid_train_dataset) % batch_size != 0, {key}, {len(id2score[key])}, {epoch}, {step}"
+                
+        for idx in np.unique(index):
+            key = str(idx)
+            assert len(id2score[key][epoch]["reward"]) == config.history.rollout_n
+            
+            if len(id2score[key][epoch]["reward"]) == 1:
+                id2mean[key] = torch.tensor(id2score[key][epoch]["reward"][0])
+                id2std[key] = torch.tensor(0.0)
+            elif len(id2score[key][epoch]["reward"]) > 1:
+                id2mean[key] = torch.mean(torch.tensor(id2score[key][epoch]["reward"]))
+                id2std[key] = torch.std(torch.tensor(id2score[key][epoch]["reward"]))
             else:
                 raise ValueError(f"no score in prompt index: {idx}")
+                
+        with open(id2score_path, "w") as f:
+            json.dump(id2score, f, indent=2)
+        
+        if step % config.history.save_freq == 0:
+            with open(os.path.join(home, f'id2score_step_{step}.json'), "w") as f:
+                json.dump(id2score, f, indent=2)
+            
         for i in range(bsz):
+            key = str(index[i])
             if norm_adv_by_std_in_grpo:
-                scores[i] = (scores[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)
+                scores[i] = (scores[i] - id2mean[key]) / (id2std[key] + epsilon)
             else:
-                scores[i] = scores[i] - id2mean[index[i]]
+                scores[i] = scores[i] - id2mean[key]
         scores = scores.unsqueeze(-1) * response_mask
 
     return scores, scores
@@ -442,6 +424,8 @@ def compute_grpohistbeta_outcome_advantage(
             shape is (bs, response_length)
     """
     
+    assert epoch >= 0, f"epoch is negative: {epoch}"
+    
     scores = token_level_rewards.sum(dim=-1)
 
     home = config.history.path
@@ -475,11 +459,11 @@ def compute_grpohistbeta_outcome_advantage(
 
             elif len(id2score[key]) == epoch + 1:
                 assert id2score[key][epoch]["epoch"] == epoch + 1
-                assert len(id2score[key][epoch]["reward"]) < config.history.rollout_n
+                assert len(id2score[key][epoch]["reward"]) < config.history.rollout_n, f"{key}, {len(id2score[key][epoch]['reward'])}, {config.history.rollout_n}, {epoch}, {step}, {index}"
                 id2score[key][epoch]["reward"].append(scores[i].item())
 
             else:
-                assert 0, "len(valid_train_dataset) % batch_size != 0"
+                assert 0, f"len(valid_train_dataset) % batch_size != 0, {key}, {len(id2score[key])}, {epoch}, {step}"
                 
         for idx in np.unique(index):
             key = str(idx)
