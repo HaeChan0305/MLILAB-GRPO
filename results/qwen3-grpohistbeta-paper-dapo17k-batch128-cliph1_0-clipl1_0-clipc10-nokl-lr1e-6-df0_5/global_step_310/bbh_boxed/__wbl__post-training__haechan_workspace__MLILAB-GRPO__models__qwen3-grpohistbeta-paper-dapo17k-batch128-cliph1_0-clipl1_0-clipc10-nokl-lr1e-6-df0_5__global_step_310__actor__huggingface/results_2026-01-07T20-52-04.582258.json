@@ -1,0 +1,2415 @@
+{
+  "results": {
+    "bbh_boxed": {
+      "accuracy_at_k,boxed-extract": 0.25341729381047456,
+      "accuracy_at_k_stderr,boxed-extract": 0.004285139565666205,
+      "pass_at_k,boxed-extract": 0.25341729381047456,
+      "pass_at_k_stderr,boxed-extract": 0.004285139565666205,
+      "alias": "bbh_boxed"
+    },
+    "bbh_boxed_boolean_expressions": {
+      "alias": " - bbh_boxed_boolean_expressions",
+      "pass_at_k,boxed-extract": 0.62,
+      "pass_at_k_stderr,boxed-extract": 0.030760116042626098,
+      "accuracy_at_k,boxed-extract": 0.62,
+      "accuracy_at_k_stderr,boxed-extract": 0.030760116042626098
+    },
+    "bbh_boxed_causal_judgement": {
+      "alias": " - bbh_boxed_causal_judgement",
+      "pass_at_k,boxed-extract": 0.1711229946524064,
+      "pass_at_k_stderr,boxed-extract": 0.027614854518412953,
+      "accuracy_at_k,boxed-extract": 0.1711229946524064,
+      "accuracy_at_k_stderr,boxed-extract": 0.027614854518412953
+    },
+    "bbh_boxed_date_understanding": {
+      "alias": " - bbh_boxed_date_understanding",
+      "pass_at_k,boxed-extract": 0.152,
+      "pass_at_k_stderr,boxed-extract": 0.022752024491765464,
+      "accuracy_at_k,boxed-extract": 0.152,
+      "accuracy_at_k_stderr,boxed-extract": 0.022752024491765464
+    },
+    "bbh_boxed_disambiguation_qa": {
+      "alias": " - bbh_boxed_disambiguation_qa",
+      "pass_at_k,boxed-extract": 0.096,
+      "pass_at_k_stderr,boxed-extract": 0.01866896141947719,
+      "accuracy_at_k,boxed-extract": 0.096,
+      "accuracy_at_k_stderr,boxed-extract": 0.01866896141947719
+    },
+    "bbh_boxed_dyck_languages": {
+      "alias": " - bbh_boxed_dyck_languages",
+      "pass_at_k,boxed-extract": 0.004,
+      "pass_at_k_stderr,boxed-extract": 0.004,
+      "accuracy_at_k,boxed-extract": 0.004,
+      "accuracy_at_k_stderr,boxed-extract": 0.004
+    },
+    "bbh_boxed_formal_fallacies": {
+      "alias": " - bbh_boxed_formal_fallacies",
+      "pass_at_k,boxed-extract": 0.392,
+      "pass_at_k_stderr,boxed-extract": 0.030938207620401222,
+      "accuracy_at_k,boxed-extract": 0.392,
+      "accuracy_at_k_stderr,boxed-extract": 0.030938207620401222
+    },
+    "bbh_boxed_geometric_shapes": {
+      "alias": " - bbh_boxed_geometric_shapes",
+      "pass_at_k,boxed-extract": 0.132,
+      "pass_at_k_stderr,boxed-extract": 0.021450980824038166,
+      "accuracy_at_k,boxed-extract": 0.132,
+      "accuracy_at_k_stderr,boxed-extract": 0.021450980824038166
+    },
+    "bbh_boxed_hyperbaton": {
+      "alias": " - bbh_boxed_hyperbaton",
+      "pass_at_k,boxed-extract": 0.132,
+      "pass_at_k_stderr,boxed-extract": 0.021450980824038166,
+      "accuracy_at_k,boxed-extract": 0.132,
+      "accuracy_at_k_stderr,boxed-extract": 0.021450980824038166
+    },
+    "bbh_boxed_logical_deduction_five_objects": {
+      "alias": " - bbh_boxed_logical_deduction_five_objects",
+      "pass_at_k,boxed-extract": 0.104,
+      "pass_at_k_stderr,boxed-extract": 0.019345100974843932,
+      "accuracy_at_k,boxed-extract": 0.104,
+      "accuracy_at_k_stderr,boxed-extract": 0.019345100974843932
+    },
+    "bbh_boxed_logical_deduction_seven_objects": {
+      "alias": " - bbh_boxed_logical_deduction_seven_objects",
+      "pass_at_k,boxed-extract": 0.08,
+      "pass_at_k_stderr,boxed-extract": 0.017192507941463025,
+      "accuracy_at_k,boxed-extract": 0.08,
+      "accuracy_at_k_stderr,boxed-extract": 0.017192507941463025
+    },
+    "bbh_boxed_logical_deduction_three_objects": {
+      "alias": " - bbh_boxed_logical_deduction_three_objects",
+      "pass_at_k,boxed-extract": 0.072,
+      "pass_at_k_stderr,boxed-extract": 0.016381005750490122,
+      "accuracy_at_k,boxed-extract": 0.072,
+      "accuracy_at_k_stderr,boxed-extract": 0.016381005750490122
+    },
+    "bbh_boxed_movie_recommendation": {
+      "alias": " - bbh_boxed_movie_recommendation",
+      "pass_at_k,boxed-extract": 0.156,
+      "pass_at_k_stderr,boxed-extract": 0.022995023034068682,
+      "accuracy_at_k,boxed-extract": 0.156,
+      "accuracy_at_k_stderr,boxed-extract": 0.022995023034068682
+    },
+    "bbh_boxed_multistep_arithmetic_two": {
+      "alias": " - bbh_boxed_multistep_arithmetic_two",
+      "pass_at_k,boxed-extract": 0.872,
+      "pass_at_k_stderr,boxed-extract": 0.021172081336336534,
+      "accuracy_at_k,boxed-extract": 0.872,
+      "accuracy_at_k_stderr,boxed-extract": 0.021172081336336534
+    },
+    "bbh_boxed_navigate": {
+      "alias": " - bbh_boxed_navigate",
+      "pass_at_k,boxed-extract": 0.72,
+      "pass_at_k_stderr,boxed-extract": 0.02845414827783231,
+      "accuracy_at_k,boxed-extract": 0.72,
+      "accuracy_at_k_stderr,boxed-extract": 0.02845414827783231
+    },
+    "bbh_boxed_object_counting": {
+      "alias": " - bbh_boxed_object_counting",
+      "pass_at_k,boxed-extract": 0.636,
+      "pass_at_k_stderr,boxed-extract": 0.030491555220405475,
+      "accuracy_at_k,boxed-extract": 0.636,
+      "accuracy_at_k_stderr,boxed-extract": 0.030491555220405475
+    },
+    "bbh_boxed_penguins_in_a_table": {
+      "alias": " - bbh_boxed_penguins_in_a_table",
+      "pass_at_k,boxed-extract": 0.06164383561643835,
+      "pass_at_k_stderr,boxed-extract": 0.019973063437597367,
+      "accuracy_at_k,boxed-extract": 0.06164383561643835,
+      "accuracy_at_k_stderr,boxed-extract": 0.019973063437597367
+    },
+    "bbh_boxed_reasoning_about_colored_objects": {
+      "alias": " - bbh_boxed_reasoning_about_colored_objects",
+      "pass_at_k,boxed-extract": 0.312,
+      "pass_at_k_stderr,boxed-extract": 0.02936106757521985,
+      "accuracy_at_k,boxed-extract": 0.312,
+      "accuracy_at_k_stderr,boxed-extract": 0.02936106757521985
+    },
+    "bbh_boxed_ruin_names": {
+      "alias": " - bbh_boxed_ruin_names",
+      "pass_at_k,boxed-extract": 0.04,
+      "pass_at_k_stderr,boxed-extract": 0.012418408411301325,
+      "accuracy_at_k,boxed-extract": 0.04,
+      "accuracy_at_k_stderr,boxed-extract": 0.012418408411301325
+    },
+    "bbh_boxed_salient_translation_error_detection": {
+      "alias": " - bbh_boxed_salient_translation_error_detection",
+      "pass_at_k,boxed-extract": 0.204,
+      "pass_at_k_stderr,boxed-extract": 0.025537121574548162,
+      "accuracy_at_k,boxed-extract": 0.204,
+      "accuracy_at_k_stderr,boxed-extract": 0.025537121574548162
+    },
+    "bbh_boxed_snarks": {
+      "alias": " - bbh_boxed_snarks",
+      "pass_at_k,boxed-extract": 0.06741573033707865,
+      "pass_at_k_stderr,boxed-extract": 0.018846817777547903,
+      "accuracy_at_k,boxed-extract": 0.06741573033707865,
+      "accuracy_at_k_stderr,boxed-extract": 0.018846817777547903
+    },
+    "bbh_boxed_sports_understanding": {
+      "alias": " - bbh_boxed_sports_understanding",
+      "pass_at_k,boxed-extract": 0.624,
+      "pass_at_k_stderr,boxed-extract": 0.03069633626739458,
+      "accuracy_at_k,boxed-extract": 0.624,
+      "accuracy_at_k_stderr,boxed-extract": 0.03069633626739458
+    },
+    "bbh_boxed_temporal_sequences": {
+      "alias": " - bbh_boxed_temporal_sequences",
+      "pass_at_k,boxed-extract": 0.044,
+      "pass_at_k_stderr,boxed-extract": 0.012997373846574952,
+      "accuracy_at_k,boxed-extract": 0.044,
+      "accuracy_at_k_stderr,boxed-extract": 0.012997373846574952
+    },
+    "bbh_boxed_tracking_shuffled_objects_five_objects": {
+      "alias": " - bbh_boxed_tracking_shuffled_objects_five_objects",
+      "pass_at_k,boxed-extract": 0.044,
+      "pass_at_k_stderr,boxed-extract": 0.012997373846574952,
+      "accuracy_at_k,boxed-extract": 0.044,
+      "accuracy_at_k_stderr,boxed-extract": 0.012997373846574952
+    },
+    "bbh_boxed_tracking_shuffled_objects_seven_objects": {
+      "alias": " - bbh_boxed_tracking_shuffled_objects_seven_objects",
+      "pass_at_k,boxed-extract": 0.068,
+      "pass_at_k_stderr,boxed-extract": 0.015953748410747037,
+      "accuracy_at_k,boxed-extract": 0.068,
+      "accuracy_at_k_stderr,boxed-extract": 0.015953748410747037
+    },
+    "bbh_boxed_tracking_shuffled_objects_three_objects": {
+      "alias": " - bbh_boxed_tracking_shuffled_objects_three_objects",
+      "pass_at_k,boxed-extract": 0.12,
+      "pass_at_k_stderr,boxed-extract": 0.020593600596839998,
+      "accuracy_at_k,boxed-extract": 0.12,
+      "accuracy_at_k_stderr,boxed-extract": 0.020593600596839998
+    },
+    "bbh_boxed_web_of_lies": {
+      "alias": " - bbh_boxed_web_of_lies",
+      "pass_at_k,boxed-extract": 0.764,
+      "pass_at_k_stderr,boxed-extract": 0.026909337594953852,
+      "accuracy_at_k,boxed-extract": 0.764,
+      "accuracy_at_k_stderr,boxed-extract": 0.026909337594953852
+    },
+    "bbh_boxed_word_sorting": {
+      "alias": " - bbh_boxed_word_sorting",
+      "pass_at_k,boxed-extract": 0.0,
+      "pass_at_k_stderr,boxed-extract": 0.0,
+      "accuracy_at_k,boxed-extract": 0.0,
+      "accuracy_at_k_stderr,boxed-extract": 0.0
+    }
+  },
+  "groups": {
+    "bbh_boxed": {
+      "accuracy_at_k,boxed-extract": 0.25341729381047456,
+      "accuracy_at_k_stderr,boxed-extract": 0.004285139565666205,
+      "pass_at_k,boxed-extract": 0.25341729381047456,
+      "pass_at_k_stderr,boxed-extract": 0.004285139565666205,
+      "alias": "bbh_boxed"
+    }
+  },
+  "group_subtasks": {
+    "bbh_boxed": [
+      "bbh_boxed_boolean_expressions",
+      "bbh_boxed_causal_judgement",
+      "bbh_boxed_date_understanding",
+      "bbh_boxed_disambiguation_qa",
+      "bbh_boxed_dyck_languages",
+      "bbh_boxed_formal_fallacies",
+      "bbh_boxed_geometric_shapes",
+      "bbh_boxed_hyperbaton",
+      "bbh_boxed_logical_deduction_five_objects",
+      "bbh_boxed_logical_deduction_seven_objects",
+      "bbh_boxed_logical_deduction_three_objects",
+      "bbh_boxed_movie_recommendation",
+      "bbh_boxed_multistep_arithmetic_two",
+      "bbh_boxed_navigate",
+      "bbh_boxed_object_counting",
+      "bbh_boxed_penguins_in_a_table",
+      "bbh_boxed_reasoning_about_colored_objects",
+      "bbh_boxed_ruin_names",
+      "bbh_boxed_salient_translation_error_detection",
+      "bbh_boxed_snarks",
+      "bbh_boxed_sports_understanding",
+      "bbh_boxed_temporal_sequences",
+      "bbh_boxed_tracking_shuffled_objects_five_objects",
+      "bbh_boxed_tracking_shuffled_objects_seven_objects",
+      "bbh_boxed_tracking_shuffled_objects_three_objects",
+      "bbh_boxed_web_of_lies",
+      "bbh_boxed_word_sorting"
+    ]
+  },
+  "configs": {
+    "bbh_boxed_boolean_expressions": {
+      "task": "bbh_boxed_boolean_expressions",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "boolean_expressions",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_causal_judgement": {
+      "task": "bbh_boxed_causal_judgement",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "causal_judgement",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_date_understanding": {
+      "task": "bbh_boxed_date_understanding",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "date_understanding",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_disambiguation_qa": {
+      "task": "bbh_boxed_disambiguation_qa",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "disambiguation_qa",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_dyck_languages": {
+      "task": "bbh_boxed_dyck_languages",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "dyck_languages",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_formal_fallacies": {
+      "task": "bbh_boxed_formal_fallacies",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "formal_fallacies",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_geometric_shapes": {
+      "task": "bbh_boxed_geometric_shapes",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "geometric_shapes",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_hyperbaton": {
+      "task": "bbh_boxed_hyperbaton",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "hyperbaton",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_logical_deduction_five_objects": {
+      "task": "bbh_boxed_logical_deduction_five_objects",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "logical_deduction_five_objects",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_logical_deduction_seven_objects": {
+      "task": "bbh_boxed_logical_deduction_seven_objects",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "logical_deduction_seven_objects",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_logical_deduction_three_objects": {
+      "task": "bbh_boxed_logical_deduction_three_objects",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "logical_deduction_three_objects",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_movie_recommendation": {
+      "task": "bbh_boxed_movie_recommendation",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "movie_recommendation",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_multistep_arithmetic_two": {
+      "task": "bbh_boxed_multistep_arithmetic_two",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "multistep_arithmetic_two",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_navigate": {
+      "task": "bbh_boxed_navigate",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "navigate",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_object_counting": {
+      "task": "bbh_boxed_object_counting",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "object_counting",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_penguins_in_a_table": {
+      "task": "bbh_boxed_penguins_in_a_table",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "penguins_in_a_table",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_reasoning_about_colored_objects": {
+      "task": "bbh_boxed_reasoning_about_colored_objects",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "reasoning_about_colored_objects",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_ruin_names": {
+      "task": "bbh_boxed_ruin_names",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "ruin_names",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_salient_translation_error_detection": {
+      "task": "bbh_boxed_salient_translation_error_detection",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "salient_translation_error_detection",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_snarks": {
+      "task": "bbh_boxed_snarks",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "snarks",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_sports_understanding": {
+      "task": "bbh_boxed_sports_understanding",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "sports_understanding",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_temporal_sequences": {
+      "task": "bbh_boxed_temporal_sequences",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "temporal_sequences",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_tracking_shuffled_objects_five_objects": {
+      "task": "bbh_boxed_tracking_shuffled_objects_five_objects",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "tracking_shuffled_objects_five_objects",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_tracking_shuffled_objects_seven_objects": {
+      "task": "bbh_boxed_tracking_shuffled_objects_seven_objects",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "tracking_shuffled_objects_seven_objects",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_tracking_shuffled_objects_three_objects": {
+      "task": "bbh_boxed_tracking_shuffled_objects_three_objects",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "tracking_shuffled_objects_three_objects",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_web_of_lies": {
+      "task": "bbh_boxed_web_of_lies",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "web_of_lies",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    },
+    "bbh_boxed_word_sorting": {
+      "task": "bbh_boxed_word_sorting",
+      "dataset_path": "SaylorTwift/bbh",
+      "dataset_name": "word_sorting",
+      "test_split": "test",
+      "doc_to_text": "def bbh_doc_to_text(doc) -> str:\n    \"\"\"Format BBH question with boxed instruction and answer choices.\"\"\"\n    input_text = doc.get(\"input\", \"\")\n    target = doc.get(\"target\", \"\")\n    \n    # Detect answer type from input and target\n    has_options = \"Options:\" in input_text or re.search(r'\\([A-Z]\\)', input_text)\n    \n    if has_options:\n        # Multiple choice - extract the choices\n        choice_match = re.findall(r'\\(([A-Z])\\)', input_text)\n        if choice_match:\n            unique_choices = sorted(set(choice_match))\n            choices_boxed = \", \".join([f\"\\\\boxed{{({c})}}\" for c in unique_choices])\n            prompt = f\"Let's reason step by step and output the final answer within \\\\boxed{{}}. Note that depending on the given options, the final answer must be a multiple-choice option among {choices_boxed}. No other format is allowed.\\n\\n\"\n        else:\n            prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    elif \"- Yes\" in input_text and \"- No\" in input_text:\n        # Yes/No format\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"true\", \"false\"]:\n        # Boolean expressions\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{True} or \\\\boxed{False}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"valid\", \"invalid\"]:\n        # Formal fallacies\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{valid} or \\\\boxed{invalid}. No other format is allowed.\\n\\n\"\n    elif target.lower() in [\"yes\", \"no\"]:\n        # Yes/No answer\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}. Note that the final answer must be either \\\\boxed{Yes} or \\\\boxed{No}. No other format is allowed.\\n\\n\"\n    else:\n        # Free-form answer (numbers, text, etc.)\n        prompt = \"Let's reason step by step and output the final answer within \\\\boxed{}.\\n\\n\"\n    \n    prompt += f\"Q: {input_text}\\n\"\n    prompt += \"A:\"\n    return prompt\n",
+      "doc_to_target": "{{target}}",
+      "unsafe_code": false,
+      "process_results": "def process_results_pass_at_k(doc, results):\n    \"\"\"\n    Process results for pass@k and accuracy@k metrics.\n    k is automatically determined by the number of results (set by 'repeats' in YAML).\n    \"\"\"\n    target = doc.get(\"answer\", doc.get(\"target\", \"\"))\n    target = normalize_answer(target)\n    \n    k = len(results) if results else 1\n    \n    if not results:\n        return {\"pass_at_k\": 0, \"accuracy_at_k\": 0.0}\n    \n    num_correct = 0\n    for res in results:\n        res_clean = normalize_answer(res)\n        if res_clean == target:\n            num_correct += 1\n    \n    any_correct = 1 if num_correct > 0 else 0\n    accuracy = num_correct / len(results)\n    \n    return {\n        \"pass_at_k\": any_correct,\n        \"accuracy_at_k\": accuracy,\n    }\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pass_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "accuracy_at_k",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "</s>",
+          "Q:",
+          "\n\n\n"
+        ],
+        "do_sample": true,
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "max_gen_toks": 4096,
+        "presence_penalty": 0.0
+      },
+      "repeats": 8,
+      "filter_list": [
+        {
+          "name": "boxed-extract",
+          "filter": [
+            {
+              "function": "regex",
+              "regex_pattern": "\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}",
+              "group_select": -1,
+              "fallback": "[invalid]"
+            },
+            {
+              "function": "take_first"
+            }
+          ]
+        }
+      ],
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+        "tensor_parallel_size": 4,
+        "gpu_memory_utilization": 0.9,
+        "max_length": 8192,
+        "max_gen_toks": 4096,
+        "trust_remote_code": true,
+        "disable_cascade_attn": true
+      }
+    }
+  },
+  "versions": {
+    "bbh_boxed": 1.0,
+    "bbh_boxed_boolean_expressions": 1.0,
+    "bbh_boxed_causal_judgement": 1.0,
+    "bbh_boxed_date_understanding": 1.0,
+    "bbh_boxed_disambiguation_qa": 1.0,
+    "bbh_boxed_dyck_languages": 1.0,
+    "bbh_boxed_formal_fallacies": 1.0,
+    "bbh_boxed_geometric_shapes": 1.0,
+    "bbh_boxed_hyperbaton": 1.0,
+    "bbh_boxed_logical_deduction_five_objects": 1.0,
+    "bbh_boxed_logical_deduction_seven_objects": 1.0,
+    "bbh_boxed_logical_deduction_three_objects": 1.0,
+    "bbh_boxed_movie_recommendation": 1.0,
+    "bbh_boxed_multistep_arithmetic_two": 1.0,
+    "bbh_boxed_navigate": 1.0,
+    "bbh_boxed_object_counting": 1.0,
+    "bbh_boxed_penguins_in_a_table": 1.0,
+    "bbh_boxed_reasoning_about_colored_objects": 1.0,
+    "bbh_boxed_ruin_names": 1.0,
+    "bbh_boxed_salient_translation_error_detection": 1.0,
+    "bbh_boxed_snarks": 1.0,
+    "bbh_boxed_sports_understanding": 1.0,
+    "bbh_boxed_temporal_sequences": 1.0,
+    "bbh_boxed_tracking_shuffled_objects_five_objects": 1.0,
+    "bbh_boxed_tracking_shuffled_objects_seven_objects": 1.0,
+    "bbh_boxed_tracking_shuffled_objects_three_objects": 1.0,
+    "bbh_boxed_web_of_lies": 1.0,
+    "bbh_boxed_word_sorting": 1.0
+  },
+  "n-shot": {
+    "bbh_boxed_boolean_expressions": 0,
+    "bbh_boxed_causal_judgement": 0,
+    "bbh_boxed_date_understanding": 0,
+    "bbh_boxed_disambiguation_qa": 0,
+    "bbh_boxed_dyck_languages": 0,
+    "bbh_boxed_formal_fallacies": 0,
+    "bbh_boxed_geometric_shapes": 0,
+    "bbh_boxed_hyperbaton": 0,
+    "bbh_boxed_logical_deduction_five_objects": 0,
+    "bbh_boxed_logical_deduction_seven_objects": 0,
+    "bbh_boxed_logical_deduction_three_objects": 0,
+    "bbh_boxed_movie_recommendation": 0,
+    "bbh_boxed_multistep_arithmetic_two": 0,
+    "bbh_boxed_navigate": 0,
+    "bbh_boxed_object_counting": 0,
+    "bbh_boxed_penguins_in_a_table": 0,
+    "bbh_boxed_reasoning_about_colored_objects": 0,
+    "bbh_boxed_ruin_names": 0,
+    "bbh_boxed_salient_translation_error_detection": 0,
+    "bbh_boxed_snarks": 0,
+    "bbh_boxed_sports_understanding": 0,
+    "bbh_boxed_temporal_sequences": 0,
+    "bbh_boxed_tracking_shuffled_objects_five_objects": 0,
+    "bbh_boxed_tracking_shuffled_objects_seven_objects": 0,
+    "bbh_boxed_tracking_shuffled_objects_three_objects": 0,
+    "bbh_boxed_web_of_lies": 0,
+    "bbh_boxed_word_sorting": 0
+  },
+  "higher_is_better": {
+    "bbh_boxed": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_boolean_expressions": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_causal_judgement": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_date_understanding": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_disambiguation_qa": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_dyck_languages": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_formal_fallacies": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_geometric_shapes": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_hyperbaton": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_logical_deduction_five_objects": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_logical_deduction_seven_objects": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_logical_deduction_three_objects": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_movie_recommendation": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_multistep_arithmetic_two": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_navigate": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_object_counting": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_penguins_in_a_table": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_reasoning_about_colored_objects": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_ruin_names": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_salient_translation_error_detection": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_snarks": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_sports_understanding": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_temporal_sequences": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_tracking_shuffled_objects_five_objects": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_tracking_shuffled_objects_seven_objects": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_tracking_shuffled_objects_three_objects": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_web_of_lies": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    },
+    "bbh_boxed_word_sorting": {
+      "pass_at_k": true,
+      "accuracy_at_k": true
+    }
+  },
+  "n-samples": {
+    "bbh_boxed_boolean_expressions": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_causal_judgement": {
+      "original": 187,
+      "effective": 187
+    },
+    "bbh_boxed_date_understanding": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_disambiguation_qa": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_dyck_languages": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_formal_fallacies": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_geometric_shapes": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_hyperbaton": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_logical_deduction_five_objects": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_logical_deduction_seven_objects": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_logical_deduction_three_objects": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_movie_recommendation": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_multistep_arithmetic_two": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_navigate": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_object_counting": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_penguins_in_a_table": {
+      "original": 146,
+      "effective": 146
+    },
+    "bbh_boxed_reasoning_about_colored_objects": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_ruin_names": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_salient_translation_error_detection": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_snarks": {
+      "original": 178,
+      "effective": 178
+    },
+    "bbh_boxed_sports_understanding": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_temporal_sequences": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_tracking_shuffled_objects_five_objects": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_tracking_shuffled_objects_seven_objects": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_tracking_shuffled_objects_three_objects": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_web_of_lies": {
+      "original": 250,
+      "effective": 250
+    },
+    "bbh_boxed_word_sorting": {
+      "original": 250,
+      "effective": 250
+    }
+  },
+  "config": {
+    "model": "vllm",
+    "model_args": "pretrained=/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface,tensor_parallel_size=4,gpu_memory_utilization=0.9,max_length=8192,max_gen_toks=4096,trust_remote_code=True,disable_cascade_attn=True",
+    "batch_size": "auto",
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {
+      "max_gen_toks": 4096,
+      "do_sample": true,
+      "temperature": 0.6,
+      "presence_penalty": 0.0,
+      "top_p": 0.95
+    },
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5fbc9ee0",
+  "date": 1767817802.4184217,
+  "pretty_env_info": "PyTorch version: 2.8.0+cu128\nIs debug build: False\nCUDA used to build PyTorch: 12.8\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 22.04.5 LTS (x86_64)\nGCC version: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nClang version: Could not collect\nCMake version: version 3.22.1\nLibc version: glibc-2.35\n\nPython version: 3.12.12 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 20:16:04) [GCC 11.2.0] (64-bit runtime)\nPython platform: Linux-6.8.0-1029-aws-x86_64-with-glibc2.35\nIs CUDA available: True\nCUDA runtime version: Could not collect\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: \nGPU 0: NVIDIA H200\nGPU 1: NVIDIA H200\nGPU 2: NVIDIA H200\nGPU 3: NVIDIA H200\nGPU 4: NVIDIA H200\nGPU 5: NVIDIA H200\nGPU 6: NVIDIA H200\nGPU 7: NVIDIA H200\n\nNvidia driver version: 570.86.15\ncuDNN version: Could not collect\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               192\nOn-line CPU(s) list:                  0-191\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) Platinum 8488C\nCPU family:                           6\nModel:                                143\nThread(s) per core:                   2\nCore(s) per socket:                   48\nSocket(s):                            2\nStepping:                             8\nBogoMIPS:                             4800.00\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq monitor ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 wbnoinvd ida arat avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq rdpid cldemote movdiri movdir64b md_clear serialize amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities\nHypervisor vendor:                    KVM\nVirtualization type:                  full\nL1d cache:                            4.5 MiB (96 instances)\nL1i cache:                            3 MiB (96 instances)\nL2 cache:                             192 MiB (96 instances)\nL3 cache:                             210 MiB (2 instances)\nNUMA node(s):                         2\nNUMA node0 CPU(s):                    0-47,96-143\nNUMA node1 CPU(s):                    48-95,144-191\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.8.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.8.90\n[pip3] nvidia-cuda-nvrtc-cu12==12.8.93\n[pip3] nvidia-cuda-runtime-cu12==12.8.90\n[pip3] nvidia-cudnn-cu12==9.10.2.21\n[pip3] nvidia-cufft-cu12==11.3.3.83\n[pip3] nvidia-curand-cu12==10.3.9.90\n[pip3] nvidia-cusolver-cu12==11.7.3.90\n[pip3] nvidia-cusparse-cu12==12.5.8.93\n[pip3] nvidia-cusparselt-cu12==0.7.1\n[pip3] nvidia-nccl-cu12==2.27.3\n[pip3] nvidia-nvjitlink-cu12==12.8.93\n[pip3] nvidia-nvtx-cu12==12.8.90\n[pip3] torch==2.8.0\n[pip3] torchaudio==2.8.0\n[pip3] torchvision==0.23.0\n[pip3] triton==3.4.0\n[conda] numpy                                2.2.6            pypi_0           pypi\n[conda] nvidia-cublas-cu12                   12.8.4.1         pypi_0           pypi\n[conda] nvidia-cuda-cupti-cu12               12.8.90          pypi_0           pypi\n[conda] nvidia-cuda-nvrtc-cu12               12.8.93          pypi_0           pypi\n[conda] nvidia-cuda-runtime-cu12             12.8.90          pypi_0           pypi\n[conda] nvidia-cudnn-cu12                    9.10.2.21        pypi_0           pypi\n[conda] nvidia-cufft-cu12                    11.3.3.83        pypi_0           pypi\n[conda] nvidia-curand-cu12                   10.3.9.90        pypi_0           pypi\n[conda] nvidia-cusolver-cu12                 11.7.3.90        pypi_0           pypi\n[conda] nvidia-cusparse-cu12                 12.5.8.93        pypi_0           pypi\n[conda] nvidia-cusparselt-cu12               0.7.1            pypi_0           pypi\n[conda] nvidia-nccl-cu12                     2.27.3           pypi_0           pypi\n[conda] nvidia-nvjitlink-cu12                12.8.93          pypi_0           pypi\n[conda] nvidia-nvtx-cu12                     12.8.90          pypi_0           pypi\n[conda] torch                                2.8.0            pypi_0           pypi\n[conda] torchaudio                           2.8.0            pypi_0           pypi\n[conda] torchvision                          0.23.0           pypi_0           pypi\n[conda] triton                               3.4.0            pypi_0           pypi",
+  "transformers_version": "4.57.1",
+  "lm_eval_version": "0.4.9.1",
+  "upper_git_hash": "5fbc9ee029d68b93de58498be2335b5f33258743",
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151643,
+  "max_length": 8192,
+  "task_hashes": {
+    "bbh_boxed_boolean_expressions": "93100b7f9f420bb18be2373bab9a69d80a1861fbca264e2ffaafe09f274be6cd",
+    "bbh_boxed_causal_judgement": "368d41328ab2fc9395a06e690ced4850c7390fbbc830c5dbc070e9e05c15390d",
+    "bbh_boxed_date_understanding": "01a2b98c5a2bf539dd721db68c5d72565aa584c1ceaf3153ba06fcb60b50bd68",
+    "bbh_boxed_disambiguation_qa": "0f972275cbcd184da7e3ac41478d9a61277ddb36295379df1bfafb11931e2018",
+    "bbh_boxed_dyck_languages": "ce71c4108146be5327bd798f8595470e7fe345cbd2a016a049b58fe8a6ce123e",
+    "bbh_boxed_formal_fallacies": "761ce1a9a8755f41fdbb387f2be1c18cc4d72c663f098a620febdecbcdc6c2b3",
+    "bbh_boxed_geometric_shapes": "2f0c8ab970fff9b71a14250380b62d0bebe8a2accda5d0b903e35e572f66b60b",
+    "bbh_boxed_hyperbaton": "d2437cddbef4657cbb561e8a57228dce0c0b0cade4d0e2aece811a06bf79db5c",
+    "bbh_boxed_logical_deduction_five_objects": "63db00ff24869e5f8a4accd14d4d59abe8fe39c087564d33cae09364039f7d6b",
+    "bbh_boxed_logical_deduction_seven_objects": "f52866d7d7c2fa948b8e5e0622811d861a47c8ea5ebc7ef9c07e329eaddae1cc",
+    "bbh_boxed_logical_deduction_three_objects": "d346e7feb525f6e868ce4e89a02f2b50382c478258c30c8b6af680832b4744c1",
+    "bbh_boxed_movie_recommendation": "4721169e7332b9895ce7bb6b0dc1dae54d1e7b6c27acfe23da614eaccb40a887",
+    "bbh_boxed_multistep_arithmetic_two": "14397aa1e4bd59fa531bedf52555b334386b622467a4d231902f4d0afa11d5ed",
+    "bbh_boxed_navigate": "1a9e70f1ba453a9b3ccab8973d213bc1381887f22c475e05069838277de46e23",
+    "bbh_boxed_object_counting": "6aba33ac99ff84a757531838cca6f32a8df5a19c1b8014868bc0570c15653f78",
+    "bbh_boxed_penguins_in_a_table": "821d0a45675f78d2dbf6bc28fd8341de57286084ed98ddef50c1f8234a8be687",
+    "bbh_boxed_reasoning_about_colored_objects": "ed86ed304db78b5334d114877f10dde05a87a4a712bf91c9cafa65c8f728e708",
+    "bbh_boxed_ruin_names": "f3fe926f36951732017a05be8ca019383bc71404da5039b45d6f68f0684ca4bc",
+    "bbh_boxed_salient_translation_error_detection": "aa1cd99144cf3d525ae5b764e82383c040e2740667061de9c222fdf9f973e6f3",
+    "bbh_boxed_snarks": "e20c2246f70e424a51168a928062696afe91106e492568b16620dd21a3ad12e2",
+    "bbh_boxed_sports_understanding": "a291a9f14b080f4097a83047ea776b6270394e6a6c458b285ca88ca988f5cdc4",
+    "bbh_boxed_temporal_sequences": "ae1f2082acdde6f2a05e19c743f61204437a592730d74604e49e589947a85aea",
+    "bbh_boxed_tracking_shuffled_objects_five_objects": "ee51e9fde80ed6d8f0495ec4aa6a3e3be05b8b61643e54d518c49c0141ebd675",
+    "bbh_boxed_tracking_shuffled_objects_seven_objects": "dd50bdff06cf1fb03d98b78df886c0b06c733f1c159bb383c3aaaf9b385c035b",
+    "bbh_boxed_tracking_shuffled_objects_three_objects": "6c9833aa9e847d90921b167b67568e8531f08795984c59aabf7b19a0d0a797d6",
+    "bbh_boxed_web_of_lies": "f5f1f589e5b075a392d1c1ce1ca76bd418e97ccc780934408a250a7c323d6ef6",
+    "bbh_boxed_word_sorting": "640fa2d0a532ec621d3898000b04d39e9b4233667cb9a40c3f882212e9cb289f"
+  },
+  "model_source": "vllm",
+  "model_name": "/wbl/post-training/haechan_workspace/MLILAB-GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310/actor/huggingface",
+  "model_name_sanitized": "__wbl__post-training__haechan_workspace__MLILAB-GRPO__models__qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5__global_step_310__actor__huggingface",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0].role == 'system' %}\n        {{- messages[0].content + '\\n\\n' }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0].content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}\n        {%- set ns.multi_step_tool = false %}\n        {%- set ns.last_query_index = index %}\n    {%- endif %}\n{%- endfor %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set content = message.content %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is defined and message.reasoning_content is not none %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in message.content %}\n                {%- set content = message.content.split('</think>')[-1].lstrip('\\n') %}\n                {%- set reasoning_content = message.content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {%- if loop.last or (not loop.last and reasoning_content) %}\n                {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content.strip('\\n') + '\\n</think>\\n\\n' + content.lstrip('\\n') }}\n            {%- else %}\n                {{- '<|im_start|>' + message.role + '\\n' + content }}\n            {%- endif %}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if (loop.first and content) or (not loop.first) %}\n                    {{- '\\n' }}\n                {%- endif %}\n                {%- if tool_call.function %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {{- '<tool_call>\\n{\"name\": \"' }}\n                {{- tool_call.name }}\n                {{- '\", \"arguments\": ' }}\n                {%- if tool_call.arguments is string %}\n                    {{- tool_call.arguments }}\n                {%- else %}\n                    {{- tool_call.arguments | tojson }}\n                {%- endif %}\n                {{- '}\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.first or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- endif %}\n{%- endif %}",
+  "chat_template_sha": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+  "start_time": 39701.103796294,
+  "end_time": 41066.849267175,
+  "total_evaluation_time_seconds": "1365.7454708809964"
+}

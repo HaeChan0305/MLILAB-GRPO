@@ -1,0 +1,9 @@
+Model: /workspace/GRPO/models/qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_25/global_step_450/actor/huggingface
+Dataset: /workspace/GRPO/data/OlympiadBench/test.parquet
+Number of problems: 674
+Samples per problem: 8
+
+Pass@1: 0.3457
+Pass@8: 0.5445
+Maj@8: 0.3056
+Avg Accuracy: 0.3407

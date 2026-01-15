@@ -1,0 +1,22 @@
+{
+  "model_path": "/workspace/GRPO/models/qwen3-grpo-paper-dapo17k-batch128-cliph0_2-clipl0_28-clipc3-nokl-lr1e-6-again/global_step_420/actor/huggingface",
+  "tensor_parallel_size": 8,
+  "gpu_memory_utilization": 0.9,
+  "dtype": "auto",
+  "data_source": "opencompass/AIME2025",
+  "data_path": "/workspace/GRPO/data/OlympiadBench/test.parquet",
+  "split": "test",
+  "n_samples": 8,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": -1,
+  "max_tokens": 4096,
+  "repetition_penalty": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "output_dir": "/workspace/GRPO/results/qwen3-grpo-paper-dapo17k-batch128-cliph0_2-clipl0_28-clipc3-nokl-lr1e-6-again/global_step_420/OlympiadBench",
+  "output_prefix": "eval",
+  "instruction": "Let's think step by step and output the final answer within \\boxed{}.\n\n",
+  "seed": 42,
+  "batch_size": null
+}

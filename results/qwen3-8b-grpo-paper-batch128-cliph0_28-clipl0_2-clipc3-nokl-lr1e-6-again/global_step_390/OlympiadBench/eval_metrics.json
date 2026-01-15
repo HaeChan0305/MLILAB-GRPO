@@ -1,0 +1,35 @@
+{
+  "model_path": "/workspace/GRPO/models/qwen3-8b-grpo-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6-again/global_step_390/actor/huggingface",
+  "data_source": "/workspace/GRPO/data/OlympiadBench/test.parquet",
+  "num_problems": 674,
+  "n_samples": 8,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": -1,
+    "max_tokens": 8192,
+    "repetition_penalty": 1.0
+  },
+  "pass@1": 0.5445103857566765,
+  "pass@8": 0.6943620178041543,
+  "maj@8": 0.5400593471810089,
+  "avg_accuracy": 0.548219584569733,
+  "all_pass_at_k": {
+    "pass@1": 0.5445103857566765,
+    "maj@1": 0.5445103857566765,
+    "pass@2": 0.6112759643916914,
+    "maj@2": 0.47181008902077154,
+    "pass@3": 0.6305637982195845,
+    "maj@3": 0.5534124629080118,
+    "pass@4": 0.655786350148368,
+    "maj@4": 0.516320474777448,
+    "pass@5": 0.6691394658753709,
+    "maj@5": 0.5652818991097923,
+    "pass@6": 0.6795252225519288,
+    "maj@6": 0.5341246290801187,
+    "pass@7": 0.6899109792284867,
+    "maj@7": 0.5593471810089021,
+    "pass@8": 0.6943620178041543,
+    "maj@8": 0.5400593471810089
+  }
+}
