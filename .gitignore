@@ -1,3 +1,6 @@
+results
+models
+
 **/*.whl
 
 **/*.pt

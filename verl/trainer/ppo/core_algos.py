@@ -471,8 +471,8 @@ def compute_grpohistbeta_outcome_advantage(
             
             alpha_prev = config.history.alpha_init if epoch == 0 else id2score[key][epoch-1]["alpha"]
             beta_prev = config.history.beta_init if epoch == 0 else id2score[key][epoch-1]["beta"]
-            id2score[key][epoch]["alpha"] = config.history.discount * alpha_prev + sum(id2score[key][epoch]["reward"])
-            id2score[key][epoch]["beta"] = config.history.discount * beta_prev + config.history.rollout_n - sum(id2score[key][epoch]["reward"])
+            id2score[key][epoch]["alpha"] = config.history.alpha_discount * alpha_prev + sum(id2score[key][epoch]["reward"])
+            id2score[key][epoch]["beta"] = config.history.beta_discount * beta_prev + config.history.rollout_n - sum(id2score[key][epoch]["reward"])
             
             a = id2score[key][epoch]["alpha"]
             b = id2score[key][epoch]["beta"]

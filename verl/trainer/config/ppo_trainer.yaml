@@ -195,7 +195,8 @@ algorithm:
     path: None
     save_freq: 20
     rollout_n: 8
-    discount: 1.0
+    alpha_discount: 1.0
+    beta_discount: 1.0
     alpha_init: 1.0
     beta_init: 1.0
 

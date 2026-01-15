@@ -1069,6 +1069,8 @@ class RayPPOTrainer:
                 id2score = json.load(f)
             with open(id2score_path_deprecated, "w") as f:
                 json.dump(id2score, f, indent=2)
+
+            print(f"copy {id2score_path} to {id2score_path_deprecated}")
                 
 
     def _start_profiling(self, do_profile: bool) -> None:
