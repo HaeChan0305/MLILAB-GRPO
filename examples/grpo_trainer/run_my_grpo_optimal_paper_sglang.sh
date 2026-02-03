@@ -10,17 +10,12 @@ export NCCL_IB_DISABLE=1
 export NCCL_P2P_DISABLE=0
 export NCCL_SHM_DISABLE=0
 export NCCL_P2P_LEVEL=SYS
-export TORCH_SYMM_MEM_DISABLE_MULTICAST=1 # This should be needed for vLLM version 0.11.0
-# export VLLM_ALLREDUCE_USE_SYMM_MEM=0
 # export NCCL_SOCKET_IFNAME=lo
 
-
 export NCCL_NVLS_ENABLE=0
-export VLLM_USE_SYMMETRIC_MEMORY=1
 unset NCCL_SOCKET_IFNAME
 
-
-
+# vLLM settings
 export VLLM_USE_V1='1'
 export WANDB_API_KEY="79f4decc1667e5ef75c38f236c356ee5cc1c764b"
 export WANDB_PROJECT="GRPO"
@@ -32,13 +27,13 @@ export HYDRA_FULL_ERROR=1
 
 experiment_name="qwen3-dr-grpo-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6-again"
 save_path="./models/$experiment_name"
-freq=5
+freq=15
 rollout=8
 
 cd /workspace/GRPO
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
-    data.train_files=/workspace/GRPO/data/DAPO/train_17288.parquet \
+    data.train_files=/home/jovyan/haechan_workspace/MLILAB-GRPO/data/DAPO/train_17288.parquet \
     data.val_files=[./data/MATH500/test.parquet,./data/AIME2024/test.parquet,./data/AIME2025/test.parquet,./data/Minerva/test.parquet,./data/AMC2023/test.parquet,./data/AMC2024/test.parquet] \
     data.train_batch_size=128 \
     data.val_batch_size=512 \
@@ -67,7 +62,7 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.disable_log_stats=False \
     actor_rollout_ref.rollout.tensor_model_parallel_size=4 \
     actor_rollout_ref.rollout.name=vllm \
-    actor_rollout_ref.rollout.gpu_memory_utilization=0.75 \
+    actor_rollout_ref.rollout.gpu_memory_utilization=0.6 \
     actor_rollout_ref.rollout.temperature=1.0 \
     actor_rollout_ref.rollout.top_k=-1 \
     actor_rollout_ref.rollout.top_p=1 \
@@ -94,7 +89,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.default_local_dir=$save_path \
     trainer.test_freq=$freq \
     trainer.total_epochs=4 \
-    trainer.val_before_train=True $@
+    trainer.val_before_train=False $@
 
 python3 send_msg.py
 # trainer.rollout_data_dir='./models/verl_grpohist_qwen2_5_1_5b_MATH/rollout' \

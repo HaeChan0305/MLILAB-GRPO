@@ -10,7 +10,7 @@ from huggingface_hub import HfApi, upload_folder, snapshot_download
 api = HfApi()
 
 
-def upload_model(experiment_name, repo_id, token, step, inference_only=True):
+def upload_model(experiment_name, repo_id, token, step, folder_path=None, inference_only=True, convert_to_safetensors=False):
     """
     모델 체크포인트를 Hugging Face에 업로드
     
@@ -19,11 +19,23 @@ def upload_model(experiment_name, repo_id, token, step, inference_only=True):
         repo_id: HuggingFace 저장소 ID
         token: HuggingFace 토큰
         step: 업로드할 step
+        folder_path: 업로드할 모델 폴더 경로 (기본값: ./models/{experiment_name}/global_step_{step})
         inference_only: True면 inference에 필요한 파일만 업로드 (기본값 True)
                        - huggingface/ 폴더
                        - model_world_size_*.pt 파일
                        False면 모든 파일 업로드 (optim, extra_state 등 포함)
+        convert_to_safetensors: True면 업로드 전 safetensors 형식으로 변환 (기본값 False)
+                               FSDP sharded checkpoint (.pt)를 HuggingFace safetensors로 변환
     """
+    if folder_path is None:
+        folder_path = f"./models/{experiment_name}/global_step_{step}"
+    
+    # Convert to safetensors format before upload if requested
+    if convert_to_safetensors:
+        actor_path = os.path.join(folder_path, "actor")
+        print(f"🔄 Converting to safetensors format before upload...")
+        convert_to_safetensors_format(actor_path)
+    
     # Inference에 불필요한 파일 패턴 (training resume에만 필요)
     ignore_patterns = None
     if inference_only:
@@ -33,13 +45,13 @@ def upload_model(experiment_name, repo_id, token, step, inference_only=True):
             "fsdp_config.json",         # FSDP 설정
             "data.pt",                  # 기타 training 데이터
         ]
+        # safetensors로 변환한 경우 .pt 파일도 제외
+        if convert_to_safetensors:
+            ignore_patterns.append("actor/model_world_size_*")  # 원본 .pt 파일 제외
         print(f"📦 Inference-only mode: excluding {ignore_patterns}")
     
     # 리포지토리 생성 (이미 존재하면 무시됨)
     api.create_repo(repo_id=repo_id, exist_ok=True, token=token)
-
-    # 모델 폴더 업로드
-    folder_path = f"./models/{experiment_name}/global_step_{step}"
 
     # chmod 777 적용
     print(f"Applying chmod 777 to {folder_path}")
@@ -54,7 +66,7 @@ def upload_model(experiment_name, repo_id, token, step, inference_only=True):
         token=token,
         ignore_patterns=ignore_patterns,
     )
-    print(f"Uploaded step {step} (inference-only: {inference_only})")
+    print(f"Uploaded step {step} (inference-only: {inference_only}, safetensors: {convert_to_safetensors})")
 
 
 
@@ -328,56 +340,7 @@ def move_id2score_json_files(experiment_name):
 
 if __name__ == "__main__":
     token = None
-    
-    # ============================================================
-    # 예시 1: 모델 다운로드
-    # ============================================================
-    # experiment_name = "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-again"
-    # repo_id = f"HaeChan0305/{experiment_name}"
-    # download_model(experiment_name, repo_id, 405, token)
-    
-    # ============================================================
-    # 예시 2: 체크포인트 정리 미리보기 (삭제 없음)
-    # ============================================================
-    
-    # experiment_names = [
-    #     # ("qwen3-grpohistbeta-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6", 200),
-    #     # ("qwen3-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6", 345),
-    #     # ("qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-again", 595),
-    #     # ("qwen3-grpo-paper-dapo17k-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6-again", 635),
-    #     # ("qwen3-grpo-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6", 345),
-    # ]    
-    
-    # for experiment_name, max_step in experiment_names:
-    #     repo_id = f"HaeChan0305/{experiment_name}"
-        
-    #     for step in range(5, max_step + 1, 5):
-    #         try:
-    #             download_model(experiment_name, repo_id, step, token, convert_to_safetensors=False)
-    #         except Exception as e:
-    #             print(f"Error downloading model for step {step}: {e}")
-    #             continue
-
-    experiment_names = [
-        "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-again", # 5, 595
-        "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_75", # 5, 540
-        "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5", # 5, 540
-        "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_25", # 5, 540
-        "qwen3-grpo-paper-dapo17k-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6-again", # 5, 635
-    ]    
-
-    for experiment_name in experiment_names:
-        repo_id = f"HaeChan0305/{experiment_name}"
-        
-        inference_only_interval = 135 # 100 step마다 모든 파일 업로드
-        for step in range(5, 540 + 1, 5):
-            try:
-                if step % inference_only_interval == 0:
-                    upload_model(experiment_name, repo_id, token, step, inference_only=False)
-                else:
-                    upload_model(experiment_name, repo_id, token, step, inference_only=True)
-            except Exception as e:
-                print(f"Error uploading model for step {step}: {e}")
-                continue
-
-        
+    exp_name = "qwen3-dr-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5"
+    repo_id = f"HaeChan0305/{exp_name}"
+    folder_path = f"/home/jovyan/haechan_workspace/verl/models/{exp_name}/global_step_240"
+    upload_model(exp_name, repo_id, token, step=240, folder_path=folder_path, inference_only=True, convert_to_safetensors=False)

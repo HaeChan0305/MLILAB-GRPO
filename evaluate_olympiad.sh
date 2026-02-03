@@ -28,16 +28,18 @@ DATA_NAMES=(
 )
 
 MODELS=(
-    "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6/global_step_315"
-    "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_75/global_step_540"
-    "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_480"
-    "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_25/global_step_465"
-    "qwen3-8b-grpo-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6-again/global_step_390"
+    # "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6/global_step_315"
+    # "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_75/global_step_540"
+    # "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_480"
+    # "qwen3-8b-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_25/global_step_465"
+    # "qwen3-8b-grpo-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6-again/global_step_390"
     # "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-again/global_step_405"
     # "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_75/global_step_365"
     # "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_310"
     # "qwen3-grpohistbeta-paper-dapo17k-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_25/global_step_450"
     # "qwen3-grpo-paper-dapo17k-batch128-cliph0_2-clipl0_28-clipc3-nokl-lr1e-6-again/global_step_420"
+    # "qwen3-dr-grpo-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6/global_step_465"
+    "qwen3-dr-grpohistbeta-paper-batch128-cliph1_0-clipl1_0-clipc10-nokl-lr1e-6-df0_5/global_step_240"
 )
 
 
@@ -45,7 +47,7 @@ MODELS=(
 for MODEL in "${MODELS[@]}"; do
     for DATA_NAME in "${DATA_NAMES[@]}"; do
         echo "[evaluate.sh] Evaluating ${DATA_NAME} at model ${MODEL}"
-        HOME_PATH="/workspace/GRPO"
+        HOME_PATH="/workspace/MLILAB-GRPO"
         ACTOR_PATH="${HOME_PATH}/models/${MODEL}/actor"
         MODEL_PATH="${ACTOR_PATH}/huggingface"
         DATA_PATH="${HOME_PATH}/data/${DATA_NAME}/test.parquet"
@@ -57,6 +59,8 @@ for MODEL in "${MODELS[@]}"; do
             python convert_model.py --actor_path "${ACTOR_PATH}"
         fi
 
+        # python upload_model.py --experiment_name "qwen3-dr-grpo-paper-batch128-cliph0_28-clipl0_2-clipc3-nokl-lr1e-6" --step 465
+
         python evaluate.py \
             --model_path ${MODEL_PATH} \
             --data_path ${DATA_PATH} \
@@ -65,7 +69,7 @@ for MODEL in "${MODELS[@]}"; do
             --n_samples 8 \
             --temperature 0.6 \
             --top_p 0.95 \
-            --max_tokens 8192
+            --max_tokens 4096
 
     done
 done
